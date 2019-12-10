@@ -14,13 +14,12 @@ class CreateSiegesTable extends Migration
     public function up()
     {
         Schema::create('sieges', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->integer('id')->autoIncrement();
             $table->string('nom');
             $table->string('ville');
             $table->string('pays');
             $table->double('budget', 8, 2);
-            $table->primary(['id']);
-            $table->timestamps();
+            $table->primary('id');
         });
     }
 

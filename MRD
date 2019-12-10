@@ -1,0 +1,6 @@
+SIEGES(id, nom, ville, pays, budget)
+SERVICES(id, Libelle, budget, #idSiege)
+PERSONNELS(id, nom, prenom, dateNaissance, telephone, password)
+APPARTIENT(idService, idPersonnel)
+DEPENSES(libelle, description, #idService, #idPersonnel)
+DEMANDES($id, budget, satus, date, #idService)

@@ -14,13 +14,13 @@ class CreatePersonnelsTable extends Migration
     public function up()
     {
         Schema::create('personnels', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
+            $table->increments('id');
             $table->string('nom');
             $table->string('prenom');
             $table->date('dateNaissance');
             $table->string('telephone')->nullable();
             $table->string('password');
-            $table->primary('id');
+            //$table->primary('id');
         });
     }
 

@@ -14,12 +14,12 @@ class CreateDemandesTable extends Migration
     public function up()
     {
         Schema::create('demandes', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
+            $table->increments('id');
             $table->double('budget', 8, 2);
             $table->boolean('status');
             $table->date('date');
             $table->integer('service_id')->unsigned()->index();
-            $table->primary('id');
+            //$table->primary('id');
             $table->foreign('service_id')->references('id')->on('services');
         });
     }

@@ -14,11 +14,11 @@ class CreateServicesTable extends Migration
     public function up()
     {
         Schema::create('services', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
+            $table->increments('id');
             $table->string('nom');
             $table->double('budget', 8, 2);
             $table->integer('siege_id')->unsigned()->index();
-            $table->primary('id');
+            //$table->primary('id');
             $table->foreign('siege_id')->references('id')->on('sieges');
         });
     }

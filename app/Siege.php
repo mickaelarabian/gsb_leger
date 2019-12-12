@@ -9,4 +9,5 @@ class Siege extends Model
     protected $table = "sieges";
     protected $primaryKey = "id";
     public $timestamps = false;
+    protected $fillable = ['nom', 'ville', 'pays', 'budget'];
 }

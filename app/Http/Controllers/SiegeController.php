@@ -10,7 +10,8 @@ class SiegeController extends Controller
     public function getAll()
     {
         $sieges = Siege::all();
-        return Controller::responseJson(200, "Les sieges ont été retournés", $sieges);
+        //return Controller::responseJson(200, "Les sieges ont été retournés", $sieges);
+        return view('home', compact('sieges'));
     }
 
     public function getSiege($id){

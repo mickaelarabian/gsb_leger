@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+Route::get('/services/siege/{id}', 'ServiceController@getAllFromSiege');
 Route::post('auth/login', 'AuthController@login');
 
 Route::group(['prefix' => 'sieges'], function(){
@@ -30,12 +30,12 @@ Route::group(['prefix' => 'sieges'], function(){
   });
 
   Route::group(['prefix' => 'services'], function(){
-    // Route::get('/', 'ServiceController@getAll');
+    Route::get('/', 'ServiceController@getAll');
     // Route::get('/show/{id}', 'ServiceController@getService');
     // Route::get('/count', 'ServiceController@getCount');
     // Route::post('/update', 'ServiceController@updateService');
     // Route::get('/delete/{id}', 'ServiceController@deleteService');
-    // Route::post('/create', 'ServiceController@createService');
+    Route::post('/create', 'ServiceController@create');
   });
 
   Route::group(['prefix' => 'personnels'], function(){

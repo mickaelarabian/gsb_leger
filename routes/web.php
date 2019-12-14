@@ -21,6 +21,7 @@
 
 Route::get('/', 'SiegeController@getAll');
 Route::get('/services/siege/{id}', 'ServiceController@getAllFromSiege');
+Route::get('/service/{id}', 'ServiceController@getService');
 
 Route::group(['prefix' => 'sieges'], function(){
     Route::get('/', 'SiegeController@getAll');

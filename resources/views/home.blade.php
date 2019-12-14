@@ -46,12 +46,17 @@
                           </div>
                         </div>
                         <div class="col-10" style="position: absolute; right:0;">
+                            <nav aria-label="breadcrumb" style="width: 30%; margin-top: 25px">
+                                <ol class="breadcrumb">
+                                  <li class="breadcrumb-item active" aria-current="page">Sièges</li>
+                                </ol>
+                              </nav>
                             <button class="btn">
                                 <div class="row shadow-sm" data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px; color: #007bff; background-color: #fff;padding: 5px 15px; border-radius: 25px;">
                                         <div style="font-size:14px;">Ajouter un siège </div> <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i>
                                     </div>
                             </button>
-                            <div class="pt-5 pr-5" style="margin:0px">
+                            <div class="pt-3 pr-5" style="margin:0px">
                         <section class="row">
                                 @foreach ($sieges as $siege)
                             <div class="col-3">

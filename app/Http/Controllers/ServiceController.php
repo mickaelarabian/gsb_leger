@@ -28,4 +28,14 @@ class ServiceController extends Controller
         $services = Service::all();
         return Controller::responseJson(200, "Les services ont été retournés", $services);
     }
+
+    public function getService($id){
+        try {
+            $service = Service::findOrFail($id);
+        } catch (\Throwable $th){
+
+        }
+        //return Controller::responseJson(200, "Le service $id a été retourné", $service);
+        return view('/service', compact('service'));
+    }
 }

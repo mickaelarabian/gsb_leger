@@ -4,3 +4,6 @@ PERSONNELS(id, nom, prenom, dateNaissance, telephone, password)
 Personnel_Service(idService, idPersonnel, date)
 DEPENSES(libelle, description, #idService, #idPersonnel date)
 DEMANDES($id, budget, status, date, #idService)
+
+
+INSERT INTO sieges (nom, ville, pays, budget) VALUES ('Administratif', 'Lyon', 'France', 10000);

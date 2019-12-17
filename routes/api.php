@@ -39,12 +39,12 @@ Route::group(['prefix' => 'sieges'], function(){
   });
 
   Route::group(['prefix' => 'personnels'], function(){
-    // Route::get('/', 'PersonnelController@getAll');
+    Route::get('/', 'PersonnelController@getAll');
     // Route::get('/show/{id}', 'PersonnelController@getPersonnel');
     // Route::get('/count', 'PersonnelController@getCount');
     // Route::post('/update', 'PersonnelController@updatePersonnel');
     // Route::get('/delete/{id}', 'PersonnelController@deletePersonnel');
-    // Route::post('/create', 'PersonnelController@createPersonnel');
+    Route::post('/create', 'PersonnelController@create');
   });
 
   Route::group(['prefix' => 'depenses'], function(){

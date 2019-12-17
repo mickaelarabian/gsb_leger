@@ -20,7 +20,6 @@ class CreatePersonnelsTable extends Migration
             $table->date('dateNaissance');
             $table->string('telephone')->nullable();
             $table->string('password');
-            //$table->primary('id');
         });
     }
 

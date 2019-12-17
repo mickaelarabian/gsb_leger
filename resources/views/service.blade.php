@@ -54,8 +54,8 @@
                                 </ol>
                               </nav>
                               <div class="row mr-5">
-                                  <div class="col-5" style="background-color: red;">
-                                    <div class="col-10">
+                                  <div class="col-7">
+                                    <div class="col-11">
                                         <div class="card shadow-sm mb-4 bg-white rounded border-0">
                                             <div class="card-body p-0">
                                                 <div class="p-3">
@@ -79,7 +79,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-10">
+                                    <div class="col-11">
                                         <div class="card shadow-sm mb-4 bg-white rounded border-0">
                                             <div class="card-body p-0">
                                                 <div class="p-3">
@@ -108,34 +108,9 @@
                                         </div>
                                     </div>
                                   </div>
-                                  <div class="col-2 pt-5" style="background-color:pink;">
-                                    <div class="col-10 mt-5">
-                                        <div class="card shadow-sm mb-4 bg-white rounded border-0">
-                                            <div class="card-body p-0">
-                                                <div class="p-3">
-                                                    <div class="dropdown" style="position: absolute; top:0; right:0;">
-                                                            <button class="btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                    <i class="fas fa-ellipsis-v"></i>
-                                                            </button>
-                                                            <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
-                                                                    <div class="w-25">
-                                                                            <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><i style="color: #fff" class="fas fa-pen"></i> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><i style="color: #fff" class="fas fa-trash-alt"></i></div>
-                                                                    </div>
-                                                             </div>
-                                                          </div>
 
-                                                <h5 class="card-title">Service {{ $service->nom }}</h5>
-                                                <p class="card-text">Service: tgh</p>
-                                                <p class="card-text">Siege: gtfvt</p>
-                                                <p class="card-text">Personnel: 6</p>
-                                                <p class="card-text">Budget: 45 000 $</p>
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-4" style="background-color: blue;">
-                                    <div class="col-8">
+                                  <div class="col-4">
+                                    <div class="col-12">
                                         <div class="card shadow-sm mb-4 bg-white rounded border-0">
                                             <div class="card-body p-0">
                                                 <div class="p-3">

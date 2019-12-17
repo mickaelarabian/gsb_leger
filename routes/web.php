@@ -31,3 +31,5 @@ Route::group(['prefix' => 'sieges'], function(){
     Route::get('/delete/{id}', 'SiegeController@delete');
     Route::post('/create', 'SiegeController@create');
   });
+
+  Route::get('/personnels', 'PersonnelController@getAll');

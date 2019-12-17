@@ -25,6 +25,7 @@ class SiegeController extends Controller
 
     public function delete($id){
         Siege::destroy($id);
+        return redirect('/');
     }
 
     public function create(Request $request){
@@ -35,6 +36,7 @@ class SiegeController extends Controller
             'budget' => $request->input('budget'),
         ];
         Siege::create($siege);
+        return redirect('/');
     }
 
     public function update(Request $request, $id){

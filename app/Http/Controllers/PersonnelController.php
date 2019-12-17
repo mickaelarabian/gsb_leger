@@ -24,4 +24,9 @@ class PersonnelController extends Controller
         ];
         Personnel::create($personnel);
     }
+
+    public function delete($id){
+        Personnel::destroy($id);
+        return redirect('/personnels');
+    }
 }

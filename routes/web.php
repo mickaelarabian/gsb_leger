@@ -11,9 +11,9 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/login', function () {
+    return view('welcome');
+});
 
 // Route::get('/home', function () {
 //     return view('home');
@@ -22,6 +22,9 @@
 Route::get('/', 'SiegeController@getAll');
 Route::get('/services/siege/{id}', 'ServiceController@getAllFromSiege');
 Route::get('/service/{id}', 'ServiceController@getService');
+Route::get('/services/add', function () {
+  return view('/service/add');
+});
 
 Route::group(['prefix' => 'sieges'], function(){
     Route::get('/', 'SiegeController@getAll');
@@ -30,6 +33,15 @@ Route::group(['prefix' => 'sieges'], function(){
     Route::post('/update/{id}', 'SiegeController@update');
     Route::get('/delete/{id}', 'SiegeController@delete');
     Route::post('/create', 'SiegeController@create');
+    Route::get('/add', function () {
+      return view('/siege/add');
+  });
   });
 
-  Route::get('/personnels', 'PersonnelController@getAll');
+Route::group(['prefix' => 'personnels'], function(){
+  Route::get('/', 'PersonnelController@getAll');
+  Route::get('/delete/{id}', 'PersonnelController@delete');
+  Route::get('/add', function () {
+    return view('/personnel/add');
+});
+});

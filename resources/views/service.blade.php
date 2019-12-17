@@ -53,7 +53,7 @@
                                   <li class="breadcrumb-item active" aria-current="page">Service x</li>
                                 </ol>
                               </nav>
-                              <div class="row mr-5">
+                              <div class="row mr-5 pt-1">
                                   <div class="col-7">
                                     <div class="col-11">
                                         <div class="card shadow-sm mb-4 bg-white rounded border-0">

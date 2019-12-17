@@ -19,6 +19,9 @@ class CreatePersonnelsTable extends Migration
             $table->string('prenom');
             $table->date('dateNaissance');
             $table->string('telephone')->nullable();
+            $table->string('rue')->nullable();
+            $table->string('codePostal')->nullable();
+            $table->string('ville')->nullable();
             $table->string('password');
         });
     }

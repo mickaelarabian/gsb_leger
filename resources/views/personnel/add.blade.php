@@ -48,42 +48,54 @@
                         <div class="col-10" style="position: absolute; right:0;">
                             <nav aria-label="breadcrumb" style="width: 30%; margin-top: 25px">
                                 <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="#">Sièges</a></li>
-                                  <li class="breadcrumb-item active" aria-current="page">Services</li>
+                                  <li class="breadcrumb-item"><a href="/personnels">Personnels</a></li>
+                                  <li class="breadcrumb-item active" aria-current="page">Ajouter</li>
                                 </ol>
                               </nav>
                             <button class="btn">
                                 <div class="row shadow-sm" data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px; color: #007bff; background-color: #fff;padding: 5px 15px; border-radius: 25px;">
-                                        <div style="font-size:14px;">Ajouter un service </div> <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i>
+                                        <div style="font-size:14px;">Retourner à la liste </div> <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i>
                                     </div>
                             </button>
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
-                                @foreach ($services as $service)
-                            <div class="col-3">
-                                    <div class="card shadow-sm mb-5 bg-white rounded border-0">
-                                        <div class="card-body p-0">
-                                            <div class="p-3">
-                                                <div class="dropdown" style="position: absolute; top:0; right:0;">
-                                                        <button class="btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <i class="fas fa-ellipsis-v"></i>
-                                                        </button>
-                                                        <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
-                                                                <div class="w-25">
-                                                                <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><i style="color: #fff" class="fas fa-pen"></i> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><a href="/services/delete/{{$service->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
-                                                                </div>
-                                                         </div>
-                                                      </div>
-
-                                            <h5 class="card-title">Service {{ $service->nom }}</h5>
-                                            <p class="card-text">Budget: {{ $service->budget }} $</p>
-                                        </div>
-                                        <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important;" href="/service/{{$service->id}}" role="button">Accéder au service</a>
+                                <div class="container">
+                                        <div class="row">
+                                            <div class="col-6 mt-1" style="margin: auto;">
+                                                    <div class="modal-dialog shadow-sm" role="document">
+                                                            <div class="modal-content" style="border:none">
+                                                              <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Ajouter un personnel</h5>
+                                                 
+                                                              </div>
+                                                              <div class="modal-body">
+                                                                      <form action="/personnels/create" method="post">
+                                                                          @csrf
+                                                                              <div class="form-group">
+                                                                                <label for="exampleInputEmail1">Nom</label>
+                                                                                <input type="text" class="form-control" name="nom" aria-describedby="emailHelp" placeholder="Administratif" required>
+                                                                              </div>
+                                                                              <div class="form-group">
+                                                                                      <label for="exampleInputEmail1">Ville siège</label>
+                                                                                      <input type="text" class="form-control" name="ville" aria-describedby="emailHelp" placeholder="Lyon" required>
+                                                                              </div>
+                                                                              <div class="form-group">
+                                                                                  <label for="exampleInputEmail1">Pays du siège</label>
+                                                                                  <input type="text" class="form-control" name="pays" aria-describedby="emailHelp" placeholder="France" required>
+                                                                              </div>
+                                                                              <div class="form-group">
+                                                                                      <label for="exampleInputEmail1">Budget</label>
+                                                                                      <input type="text" class="form-control" name="budget" aria-describedby="emailHelp" placeholder="France" required>
+                                                                                  </div>
+                                                                              <button type="submit" class="btn btn-primary">Ajouter</button>
+                                                                            </form>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
-
 
                         </section>
                     </div>

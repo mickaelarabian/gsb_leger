@@ -63,31 +63,93 @@
                                 </ol>
                               </nav>
                             <button class="btn">
-                                <div class="row shadow-sm" data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px; color: #007bff; background-color: #fff;padding: 5px 15px; border-radius: 25px;">
-                                        <div style="font-size:14px;">Ajouter un personnel </div> <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i>
+                                <div class="row shadow-sm" data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; padding: 5px 15px; right: 40px; color: #007bff; background-color: #fff; border-radius: 25px;">
+                                        <a style="padding: 5px 15px;" class="row" href="/personnels/add"><div style="font-size:14px;">Ajouter un personnel </div> <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
                                     </div>
                             </button>
                             <div class="pr-5" style="margin:0px">
                         <section class="row">
                             <div class="col-10">
-                            <div class=" shadow-sm mb-4 rounded border-0">
+                            <div class="">
                                 <div class="body p-0">
                                     <div class="">
-                                        <div class="dropdown" style="position: absolute; top:0; right:0;">
-                                                <button class="btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i class="fas fa-ellipsis-v"></i>
-                                                </button>
-                                                <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
-                                                        <div class="w-25">
-                                                                <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><i style="color: #fff" class="fas fa-pen"></i> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><i style="color: #fff" class="fas fa-trash-alt"></i></div>
+                                              <div class="bg-white p-3 mb-2 shadow-sm rounded row">
+                                                  <div class="col-1 text-center">
+                                                      <h6 class="card-title mb-0" style="font-weight:bold">Matricule</h6>
+                                                  </div>
+                                                  <div class="col-1 text-center">
+                                                        <h6 class="card-title mb-0" style="font-weight:bold">Nom</h6>
+                                                    </div>
+                                                  <div class="col-1 text-center">
+                                                        <h6 class="card-title mb-0" style="font-weight:bold">Prénom</h6>
+                                                    </div>
+                                                    <div class="col-1 text-center">
+                                                            <h6 class="card-title mb-0" style="font-weight:bold">Poste</h6>
                                                         </div>
-                                                 </div>
+                                                    <div class="col-2 text-center">
+                                                            <h6 class="card-title mb-0" style="font-weight:bold">Date de naissance</h6>
+                                                        </div>
+                                                        <div class="col-1 text-center">
+                                                                <h6 class="card-title mb-0" style="font-weight:bold">Téléphone</h6>
+                                                            </div>
+                                                            <div class="col-1 text-center" >
+                                                                    <h6 class="card-title mb-0" style="font-weight:bold">Rue</h6>
+                                                                </div>
+                                                                <div class="col-2 text-center">
+                                                                        <h6 class="card-title mb-0" style="font-weight:bold">Code Postal</h6>
+                                                                    </div>
+                                                                    <div class="col-1 text-center">
+                                                                            <h6 class="card-title mb-0" style="font-weight:bold">Ville</h6>
+                                                                        </div>
                                               </div>
-                                              <div class="bg-white p-3 mb-1">
-                                                  <h5 class="card-title">Liste du personnel</h5>
-                                              </div>
-                                    <div class="bg-white p-2 mb-1">Arabian Mickaël Responsable Date</div>
-                                    <div class="bg-white p-2 mb-1">Arabian Mickaël Responsable Date</div>
+                                              @foreach ($personnels as $personnel)
+                                    <div class="bg-white p-2 mb-2 shadow-sm rounded row">
+
+                                            <div class="col-1 p-1 text-center" style="font-size: 15px">
+                                            <p class="card-title mb-0">{{$personnel->id}}</p>
+                                                </div>
+                                                <div class="col-1 p-1 text-center" style="font-size: 15px">
+                                                      <p class="card-title mb-0">{{$personnel->nom}}</p>
+                                                  </div>
+                                                <div class="col-1 p-1 text-center" style="font-size: 15px">
+                                                      <p class="card-title mb-0">{{$personnel->prenom}}</p>
+                                                  </div>
+                                                  <div class="col-1 p-1 text-center" style="font-size: 15px">
+                                                        <p class="card-title mb-0">{{$personnel->prenom}}</p>
+                                                    </div>
+                                                  <div class="col-2 p-1 text-center" style="font-size: 15px">
+                                                          <p class="card-title mb-0">{{$personnel->dateNaissance}}</p>
+                                                      </div>
+                                                      <div class="col-1 p-1 text-center" style="font-size: 15px">
+                                                              <p class="card-title mb-0">{{$personnel->telephone}}</p>
+                                                          </div>
+                                                          <div class="col-1 p-1 text-center" style="font-size: 15px">
+                                                                  <p class="card-title mb-0">Rue</p>
+                                                              </div>
+                                                              <div class="col-2 p-1 text-center" style="font-size: 15px">
+                                                                      <p class="card-title mb-0">Code Postal</p>
+                                                                  </div>
+                                                                  <div class="col-1 p-1 text-center" style="font-size: 15px">
+                                                                          <p class="card-title mb-0">Ville</p>
+                                                                      </div>
+                                                                      <div class="col-1 p-1" style="font-size: 15px">
+                                                                            <div class="dropdown" style="position: absolute; top:-7px; right:0;">
+                                                                                    <button class="btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                            <i class="fas fa-ellipsis-h"></i>
+                                                                                    </button>
+                                                                                    <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
+                                                                                            <div class="w-25">
+                                                                                            <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><i style="color: #fff" class="fas fa-pen"></i> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><a href="/personnels/delete/{{$personnel->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
+                                                                                            </div>
+                                                                                     </div>
+                                                                                  </div>
+                                                                        </div>
+
+
+
+                                    </div>
+                                    @endforeach
+                                   
                                 </div>
 
                                 </div>

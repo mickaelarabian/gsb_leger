@@ -62,18 +62,16 @@
                                   <li class="breadcrumb-item"><a href="#">Personnels /</a></li>
                                 </ol>
                               </nav>
-                            <button class="btn">
-                                <div class="row shadow-sm" data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; padding: 5px 15px; right: 40px; color: #007bff; background-color: #fff; border-radius: 25px;">
-                                        <a style="padding: 5px 15px;" class="row" href="/personnels/add"><div style="font-size:14px;">Ajouter un personnel </div> <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
-                                    </div>
-                            </button>
+                              <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
+                                <a class="shadow-sm" style="font-size: 15px; padding: 5px 15px; color: #fff; background-color: #ff7776; border-radius: 25px;" class="row" href="/personnels/create">Ajouter un personnel <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
+                            </div>
                             <div class="pr-5" style="margin:0px">
                         <section class="row">
                             <div class="col-10">
                             <div class="">
                                 <div class="body p-0">
                                     <div class="">
-                                              <div class="bg-white p-3 mb-2 shadow-sm rounded row">
+                                              <div class="p-3 mb-2 shadow-sm rounded row" style="background-color:#ff7776; color:#fff;">
                                                   <div class="col-1 text-center">
                                                       <h6 class="card-title mb-0" style="font-weight:bold">Matricule</h6>
                                                   </div>
@@ -84,7 +82,7 @@
                                                         <h6 class="card-title mb-0" style="font-weight:bold">Prénom</h6>
                                                     </div>
                                                     <div class="col-1 text-center">
-                                                            <h6 class="card-title mb-0" style="font-weight:bold">Poste</h6>
+                                                            <h6 class="card-title mb-0" style="font-weight:bold">Status</h6>
                                                         </div>
                                                     <div class="col-2 text-center">
                                                             <h6 class="card-title mb-0" style="font-weight:bold">Date de naissance</h6>
@@ -92,8 +90,8 @@
                                                         <div class="col-1 text-center">
                                                                 <h6 class="card-title mb-0" style="font-weight:bold">Téléphone</h6>
                                                             </div>
-                                                            <div class="col-1 text-center" >
-                                                                    <h6 class="card-title mb-0" style="font-weight:bold">Rue</h6>
+                                                            <div class="col-2 text-center" >
+                                                                    <h6 class="card-title mb-0" style="font-weight:bold">Adresse</h6>
                                                                 </div>
                                                                 <div class="col-2 text-center">
                                                                         <h6 class="card-title mb-0" style="font-weight:bold">Code Postal</h6>
@@ -115,7 +113,7 @@
                                                       <p class="card-title mb-0">{{$personnel->prenom}}</p>
                                                   </div>
                                                   <div class="col-1 p-1 text-center" style="font-size: 15px">
-                                                        <p class="card-title mb-0">{{$personnel->prenom}}</p>
+                                                        <p class="card-title mb-0">{{$personnel->status}}</p>
                                                     </div>
                                                   <div class="col-2 p-1 text-center" style="font-size: 15px">
                                                           <p class="card-title mb-0">{{$personnel->dateNaissance}}</p>
@@ -123,33 +121,33 @@
                                                       <div class="col-1 p-1 text-center" style="font-size: 15px">
                                                               <p class="card-title mb-0">{{$personnel->telephone}}</p>
                                                           </div>
-                                                          <div class="col-1 p-1 text-center" style="font-size: 15px">
-                                                                  <p class="card-title mb-0">Rue</p>
+                                                          <div class="col-2 p-1 text-center" style="font-size: 15px">
+                                                                  <p class="card-title mb-0">{{$personnel->adresse}}</p>
                                                               </div>
                                                               <div class="col-2 p-1 text-center" style="font-size: 15px">
-                                                                      <p class="card-title mb-0">Code Postal</p>
+                                                                      <p class="card-title mb-0">{{$personnel->codePostal}}</p>
                                                                   </div>
                                                                   <div class="col-1 p-1 text-center" style="font-size: 15px">
-                                                                          <p class="card-title mb-0">Ville</p>
+                                                                          <p class="card-title mb-0">{{$personnel->ville}}</p>
                                                                       </div>
-                                                                      <div class="col-1 p-1" style="font-size: 15px">
-                                                                            <div class="dropdown" style="position: absolute; top:-7px; right:0;">
+
+                                                                            <div class="dropdown" style="position: absolute; right:0;">
                                                                                     <button class="btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                                            <i class="fas fa-ellipsis-h"></i>
+                                                                                            <i class="fas fa-ellipsis-v"></i>
                                                                                     </button>
                                                                                     <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
                                                                                             <div class="w-25">
-                                                                                            <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><i style="color: #fff" class="fas fa-pen"></i> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><a href="/personnels/delete/{{$personnel->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
+                                                                                            <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><i style="color: #fff" class="fas fa-pen"></i> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><a href="/personnels/delete/{{$personnel->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
                                                                                             </div>
                                                                                      </div>
                                                                                   </div>
-                                                                        </div>
+
 
 
 
                                     </div>
                                     @endforeach
-                                   
+
                                 </div>
 
                                 </div>

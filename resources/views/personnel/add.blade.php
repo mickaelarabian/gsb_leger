@@ -52,11 +52,9 @@
                                   <li class="breadcrumb-item active" aria-current="page">Ajouter</li>
                                 </ol>
                               </nav>
-                            <button class="btn">
-                                <div class="row shadow-sm" data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px; color: #007bff; background-color: #fff;padding: 5px 15px; border-radius: 25px;">
-                                        <div style="font-size:14px;">Retourner à la liste </div> <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i>
-                                    </div>
-                            </button>
+                              <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
+                                <a class="shadow-sm" style="font-size: 15px; padding: 5px 15px; color: #fff; background-color: #ff7776; border-radius: 25px;" class="row" href="/personnels">Retourner à la liste <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i></a>
+                            </div>
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
                                 <div class="container">
@@ -66,28 +64,49 @@
                                                             <div class="modal-content" style="border:none">
                                                               <div class="modal-header">
                                                                 <h5 class="modal-title" id="exampleModalLabel">Ajouter un personnel</h5>
-                                                 
+
                                                               </div>
                                                               <div class="modal-body">
                                                                       <form action="/personnels/create" method="post">
                                                                           @csrf
                                                                               <div class="form-group">
                                                                                 <label for="exampleInputEmail1">Nom</label>
-                                                                                <input type="text" class="form-control" name="nom" aria-describedby="emailHelp" placeholder="Administratif" required>
+                                                                                <input type="text" class="form-control" name="nom" aria-describedby="emailHelp" placeholder="Mickaël" required>
                                                                               </div>
                                                                               <div class="form-group">
-                                                                                      <label for="exampleInputEmail1">Ville siège</label>
-                                                                                      <input type="text" class="form-control" name="ville" aria-describedby="emailHelp" placeholder="Lyon" required>
+                                                                                      <label for="exampleInputEmail1">Prénom</label>
+                                                                                      <input type="text" class="form-control" name="prenom" aria-describedby="emailHelp" placeholder="Arabian" required>
                                                                               </div>
                                                                               <div class="form-group">
-                                                                                  <label for="exampleInputEmail1">Pays du siège</label>
-                                                                                  <input type="text" class="form-control" name="pays" aria-describedby="emailHelp" placeholder="France" required>
+                                                                                <select class="custom-select" name="status" required>
+                                                                                  <option value="">Choisir un status</option>
+                                                                                  <option value="Responsable">Responsable</option>
+                                                                                  <option value="Chercheur">Chercheur</option>
+                                                                                  <option value="Commercial">Commercial</option>
+                                                                                  <option value="Stagiaire">Stagiaire</option>
+                                                                                </select>
                                                                               </div>
                                                                               <div class="form-group">
-                                                                                      <label for="exampleInputEmail1">Budget</label>
-                                                                                      <input type="text" class="form-control" name="budget" aria-describedby="emailHelp" placeholder="France" required>
+                                                                                  <label for="exampleInputEmail1">Date de naissance</label>
+                                                                                  <input type="text" class="form-control" name="dateNaissance" aria-describedby="emailHelp" placeholder="1999-01-01" required>
+                                                                              </div>
+                                                                              <div class="form-group">
+                                                                                      <label for="exampleInputEmail1">Téléphone</label>
+                                                                                      <input type="text" class="form-control" name="telephone" aria-describedby="emailHelp" placeholder="0646623249" required>
                                                                                   </div>
-                                                                              <button type="submit" class="btn btn-primary">Ajouter</button>
+                                                                                  <div class="form-group">
+                                                                                    <label for="exampleInputEmail1">Adresse</label>
+                                                                                    <input type="text" class="form-control" name="adresse" aria-describedby="emailHelp" placeholder="16 rue de la prairie" required>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="exampleInputEmail1">Code postal</label>
+                                                                                    <input type="text" class="form-control" name="codePostal" aria-describedby="emailHelp" placeholder="69150" required>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label for="exampleInputEmail1">Ville</label>
+                                                                                    <input type="text" class="form-control" name="ville" aria-describedby="emailHelp" placeholder="Lyon" required>
+                                                                                </div>
+                                                                              <button style="background-color:#ff7776; border-color:#ff7776" type="submit" class="btn btn-primary">Ajouter</button>
                                                                             </form>
                                                               </div>
                                                             </div>

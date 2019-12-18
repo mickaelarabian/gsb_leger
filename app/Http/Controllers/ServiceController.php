@@ -11,16 +11,17 @@ class ServiceController extends Controller
     {
         $services = Service::where('siege_id', $id)->get();
         //return Controller::responseJson(200, "Les services ont été retournés", $services);
-        return view('/services', compact('services'));
+        return view('/services', compact('services', 'id'));
     }
 
-    public function create(Request $request){
+    public function create(Request $request, $id){
         $service = [
             'nom' => $request->input('nom'),
             'budget' => $request->input('budget'),
-            'siege_id' => $request->input('siege_id'),
+            'siege_id' => $id
         ];
         Service::create($service);
+        return redirect('/sieges');
     }
 
     public function getAll()
@@ -37,5 +38,10 @@ class ServiceController extends Controller
         }
         //return Controller::responseJson(200, "Le service $id a été retourné", $service);
         return view('/service', compact('service'));
+    }
+
+    public function displayCreate($id){
+
+        return view('/service/add', compact('id'));
     }
 }

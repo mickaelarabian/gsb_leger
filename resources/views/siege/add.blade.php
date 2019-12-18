@@ -52,11 +52,10 @@
                                   <li class="breadcrumb-item active" aria-current="page">Ajouter</li>
                                 </ol>
                               </nav>
-                            <button class="btn">
-                                <div class="row shadow-sm" data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px; color: #007bff; background-color: #fff;padding: 5px 15px; border-radius: 25px;">
-                                        <div style="font-size:14px;">Retourner à la liste </div> <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i>
-                                    </div>
-                            </button>
+
+                            <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
+                                <a class="shadow-sm" style="font-size: 15px; padding: 5px 15px; color: #fff; background-color: #ff7776; border-radius: 25px;" class="row" href="/sieges">Retourner à la liste <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i></a>
+                            </div>
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
                                 <div class="container">
@@ -66,28 +65,28 @@
                                                             <div class="modal-content" style="border:none">
                                                               <div class="modal-header">
                                                                 <h5 class="modal-title" id="exampleModalLabel">Ajouter un siège</h5>
-                                                 
+
                                                               </div>
                                                               <div class="modal-body">
                                                                       <form action="/sieges/create" method="post">
                                                                           @csrf
                                                                               <div class="form-group">
                                                                                 <label for="exampleInputEmail1">Nom du siège</label>
-                                                                                <input type="text" class="form-control" name="nom" aria-describedby="emailHelp" placeholder="Administratif" required>
+                                                                                <input type="text" class="form-control" name="nom" aria-describedby="emailHelp" placeholder="Administratif" autofocus required>
                                                                               </div>
                                                                               <div class="form-group">
-                                                                                      <label for="exampleInputEmail1">Ville siège</label>
+                                                                                      <label for="exampleInputEmail1">Ville</label>
                                                                                       <input type="text" class="form-control" name="ville" aria-describedby="emailHelp" placeholder="Lyon" required>
                                                                               </div>
                                                                               <div class="form-group">
-                                                                                  <label for="exampleInputEmail1">Pays du siège</label>
+                                                                                  <label for="exampleInputEmail1">Pays</label>
                                                                                   <input type="text" class="form-control" name="pays" aria-describedby="emailHelp" placeholder="France" required>
                                                                               </div>
                                                                               <div class="form-group">
                                                                                       <label for="exampleInputEmail1">Budget</label>
                                                                                       <input type="text" class="form-control" name="budget" aria-describedby="emailHelp" placeholder="France" required>
                                                                                   </div>
-                                                                              <button type="submit" class="btn btn-primary">Ajouter</button>
+                                                                              <button style="background-color:#ff7776; border-color:#ff7776;" type="submit" class="btn btn-primary">Ajouter</button>
                                                                             </form>
                                                               </div>
                                                             </div>

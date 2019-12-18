@@ -9,5 +9,5 @@ class Personnel extends Model
     protected $table = "personnels";
     protected $primaryKey = "id";
     public $timestamps = false;
-    protected $fillable = ['nom', 'prenom', 'dateNaissance', 'telephone', 'password'];
+    protected $fillable = ['nom', 'prenom', 'status', 'dateNaissance', 'telephone', 'adresse', 'codePostal', 'ville', 'password'];
 }

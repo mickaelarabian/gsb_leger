@@ -52,11 +52,9 @@
                                   <li class="breadcrumb-item active" aria-current="page">Services</li>
                                 </ol>
                               </nav>
-                            <button class="btn">
-                                <div class="row shadow-sm" data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px; color: #007bff; background-color: #fff;padding: 5px 15px; border-radius: 25px;">
-                                        <div style="font-size:14px;">Ajouter un service </div> <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i>
-                                    </div>
-                            </button>
+                              <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
+                              <a class="shadow-sm" style="font-size: 15px; padding: 5px 15px; color: #fff; background-color: #ff7776; border-radius: 25px;" class="row" href="/services/create/{{$id}}">Ajouter un service <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
+                            </div>
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
                                 @foreach ($services as $service)
@@ -70,7 +68,7 @@
                                                         </button>
                                                         <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
                                                                 <div class="w-25">
-                                                                <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><i style="color: #fff" class="fas fa-pen"></i> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><a href="/services/delete/{{$service->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
+                                                                <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><i style="color: #fff" class="fas fa-pen"></i> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><a href="/services/delete/{{$service->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
                                                                 </div>
                                                          </div>
                                                       </div>
@@ -78,7 +76,7 @@
                                             <h5 class="card-title">Service {{ $service->nom }}</h5>
                                             <p class="card-text">Budget: {{ $service->budget }} $</p>
                                         </div>
-                                        <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important;" href="/service/{{$service->id}}" role="button">Accéder au service</a>
+                                        <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important; background-color:#ff7776; border-color:#ff7776;" href="/service/{{$service->id}}" role="button">Accéder au service</a>
                                         </div>
                                     </div>
                                 </div>

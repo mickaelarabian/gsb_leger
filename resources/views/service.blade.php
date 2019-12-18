@@ -70,7 +70,7 @@
                                                              </div>
                                                           </div>
 
-                                                <h5 class="card-title">Service {{ $service->nom }}</h5>
+                                                <h5 class="card-title">Service</h5>
                                                 <p class="card-text">Service: tgh</p>
                                                 <p class="card-text">Siege: gtfvt</p>
                                                 <p class="card-text">Personnel: 6</p>
@@ -103,7 +103,7 @@
                                                 <p class="card-text">Arabian Mickaël Responsable Date</p>
                                                 <p class="card-text">Arabian Mickaël Responsable Date</p>
                                             </div>
-                                            <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important;" href="/service/{{$service->id}}" role="button">Accéder au service</a>
+                                            <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important;" href="/service/" role="button">Accéder au service</a>
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +141,7 @@
                                                 <p class="card-text">Libelle date -50$</p>
                                                 <p class="card-text">Libelle date -50$</p>
                                             </div>
-                                            <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important;" href="/service/{{$service->id}}" role="button">Accéder au service</a>
+                                            <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important;" href="/service/" role="button">Accéder au service</a>
                                             </div>
                                         </div>
                                     </div>

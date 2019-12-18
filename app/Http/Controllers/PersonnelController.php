@@ -18,11 +18,16 @@ class PersonnelController extends Controller
         $personnel = [
             'nom' => $request->input('nom'),
             'prenom' => $request->input('prenom'),
+            'status' => $request->input('status'),
             'dateNaissance' => $request->input('dateNaissance'),
             'telephone' => $request->input('telephone'),
+            'adresse' => $request->input('adresse'),
+            'codePostal' => $request->input('codePostal'),
+            'ville' => $request->input('ville'),
             'password' => $request->input('password'),
         ];
         Personnel::create($personnel);
+        return redirect('/personnels');
     }
 
     public function delete($id){

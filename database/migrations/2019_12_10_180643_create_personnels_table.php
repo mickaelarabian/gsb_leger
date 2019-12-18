@@ -17,12 +17,13 @@ class CreatePersonnelsTable extends Migration
             $table->increments('id');
             $table->string('nom');
             $table->string('prenom');
+            $table->string('status');
             $table->date('dateNaissance');
             $table->string('telephone')->nullable();
-            $table->string('rue')->nullable();
+            $table->string('adresse')->nullable();
             $table->string('codePostal')->nullable();
             $table->string('ville')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
         });
     }
 

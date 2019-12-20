@@ -78,7 +78,7 @@
                                                                                       <label for="exampleInputEmail1">Budget</label>
                                                                                       <input type="text"  class="form-control" name="budget" aria-describedby="emailHelp" placeholder="France" required>
                                                                                   </div>
-                                                                              <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px;" type="submit" class="btn btn-primary">Ajouter</button>
+                                                                              <button style="background-color:#ff7776; border-color:#ff7776; font-size: 13px; padding: 5px 10px;" type="submit" class="btn btn-primary">Ajouter</button>
                                                                             </form>
                                                               </div>
                                                             </div>

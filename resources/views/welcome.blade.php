@@ -29,7 +29,7 @@
                                           <label for="exampleInputEmail1">Mot de passe</label>
                                           <input type="text" class="form-control" name="ville" aria-describedby="emailHelp" placeholder="*******" required>
                                   </div>
-                                  <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px;" type="submit" class="btn btn-primary">Se connecter</button>
+                                  <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px; font-size: 13px;" type="submit" class="btn btn-primary">Se connecter</button>
                                 </form>
                   </div>
                 </div>
@@ -40,3 +40,9 @@
 
     </body>
 </html>
+
+<style>
+    .form-control, label{
+        font-size:13px;
+    }
+    </style>

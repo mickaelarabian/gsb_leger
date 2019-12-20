@@ -101,15 +101,13 @@
                                         <form class="row" action="">
                                             <div class="form">
                                                 <select class="custom-select shadow-sm" style="border: 1px solid #fff; font-size: 13px;" name="status" required>
-                                                    <option value="">Choisir un personnel</option>
-                                                    <option value="Responsable">Responsable</option>
-                                                    <option value="Chercheur">Chercheur</option>
-                                                    <option value="Commercial">Commercial</option>
-                                                    <option value="Stagiaire">Stagiaire</option>
-                                                    <option value="Administrateur">Administrateur</option>
+                                                    <option value="">Selectionner un personnel</option>
+                                                    @foreach ($personnels as $personnel)
+                                                    <option value="Administrateur">{{$personnel->nom}} {{$personnel->prenom}}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
-                                            <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px; font-size:13px; margin-left:5px;" type="submit" class="btn btn-primary">Ajouter</button>
+                                            <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px; font-size:13px; margin-left:5px;" type="submit" class="btn btn-primary">Relier au service</button>
                                         </form>
                                     </div>
                                     </div>

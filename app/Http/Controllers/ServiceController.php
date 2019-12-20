@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Service;
+use App\Personnel;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class ServiceController extends Controller
@@ -36,11 +37,12 @@ class ServiceController extends Controller
             $service = Service::where('id', $id)
                 ->with(['personnels', 'depenses'])
                 ->first();
+            $personnels = Personnel::all();
         } catch (ModelNotFoundException $e){
 
         }
         //return Controller::responseJson(200, "Le service $id a été retourné", $service);
-        return view('/service', compact('service'));
+        return view('/service', compact('service', 'personnels'));
     }
 
     public function displayCreate($id){

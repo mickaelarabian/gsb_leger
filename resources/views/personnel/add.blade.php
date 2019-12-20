@@ -53,13 +53,13 @@
                                 <div class="container">
                                         <div class="row">
                                             <div class="col-6 mt-1" style="margin: auto;">
-                                                    <div class="modal-dialog shadow-sm" role="document">
-                                                            <div class="modal-content" style="border:none">
-                                                              <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Ajouter un personnel</h5>
+                                                    <div class="modal-dialog" role="document">
+                                                            <div class="modal-content" style="border:none; background:none;">
+                                                                <div class="modal-header rounded shadow-sm mb-1" style="background-color: #ff7776; padding: 8px 10px;">
+                                                                    <h5 class="modal-title" style="font-size:15px; color:#fff; font-weight:bold;" id="exampleModalLabel">Ajouter un personnel</h5>
 
-                                                              </div>
-                                                              <div class="modal-body">
+                                                                  </div>
+                                                                  <div class="modal-body rounded bg-white shadow-sm">
                                                                       <form action="/personnels/create" method="post">
                                                                           @csrf
                                                                               <div class="form-group">
@@ -70,8 +70,9 @@
                                                                                       <label for="exampleInputEmail1">Prénom</label>
                                                                                       <input type="text" class="form-control" name="prenom" aria-describedby="emailHelp" placeholder="Mickaël" required>
                                                                               </div>
+                                                                              <label for="exampleInputEmail1">Status</label>
                                                                               <div class="form-group">
-                                                                                <select class="custom-select" name="status" required>
+                                                                                <select class="custom-select" style="font-size:13px;" name="status" required>
                                                                                   <option value="">Choisir un status</option>
                                                                                   <option value="Responsable">Responsable</option>
                                                                                   <option value="Chercheur">Chercheur</option>
@@ -100,7 +101,7 @@
                                                                                     <label for="exampleInputEmail1">Ville</label>
                                                                                     <input type="text" class="form-control" name="ville" aria-describedby="emailHelp" placeholder="Lyon" required>
                                                                                 </div>
-                                                                              <button style="background-color:#ff7776; border-color:#ff7776" type="submit" class="btn btn-primary">Ajouter</button>
+                                                                              <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px; font-size:13px;" type="submit" class="btn btn-primary">Ajouter</button>
                                                                             </form>
                                                               </div>
                                                             </div>
@@ -118,3 +119,9 @@
 
     </body>
 </html>
+
+<style>
+    .form-control, label{
+        font-size:13px;
+    }
+    </style>

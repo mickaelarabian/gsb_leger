@@ -18,7 +18,7 @@ class CreateServicesTable extends Migration
             $table->string('nom');
             $table->double('budget', 8, 2);
             $table->integer('siege_id')->unsigned()->index();
-            $table->foreign('siege_id')->references('id')->on('sieges');
+            $table->foreign('siege_id')->references('id')->on('sieges')->onDelete('cascade');;
         });
     }
 

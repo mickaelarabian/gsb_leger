@@ -24,6 +24,7 @@ Route::get('/services/siege/{id}', 'ServiceController@getAllFromSiege');
 Route::get('/service/{id}', 'ServiceController@getService');
 Route::get('/services/create/{id}', 'ServiceController@displayCreate');
 Route::post('/services/create/{id}', 'ServiceController@create');
+Route::get('/services/delete/{id}', 'ServiceController@delete');
 
 Route::group(['prefix' => 'sieges'], function(){
     Route::get('/', 'SiegeController@getAll');
@@ -45,3 +46,9 @@ Route::group(['prefix' => 'personnels'], function(){
     return view('/personnel/add');
 });
 });
+
+//Routes personnels_service
+Route::post('/personnels/services/create/{id}', 'PersonnelServiceController@create');
+Route::get('/personnels/services/delete/{id}/{id2}', 'PersonnelServiceController@delete');
+
+

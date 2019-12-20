@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Service;
 use App\Personnel;
+use App\Personnel_Service;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class ServiceController extends Controller
@@ -26,6 +27,11 @@ class ServiceController extends Controller
         return redirect('/sieges');
     }
 
+    public function delete($id){
+        Service::destroy($id);
+        return back();
+    }
+
     public function getAll()
     {
         $services = Service::all();
@@ -37,7 +43,10 @@ class ServiceController extends Controller
             $service = Service::where('id', $id)
                 ->with(['personnels', 'depenses'])
                 ->first();
-            $personnels = Personnel::all();
+            //recup toutes les personnes qui ne sont pas dans le service
+            $personnelsEnservice = Personnel_Service::select('personnel_id')->where('service_id', $id)->get();
+            $personnels = Personnel::whereNotIn('id', $personnelsEnservice)->get();
+
         } catch (ModelNotFoundException $e){
 
         }

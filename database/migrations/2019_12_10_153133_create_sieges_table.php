@@ -19,7 +19,6 @@ class CreateSiegesTable extends Migration
             $table->string('ville');
             $table->string('pays');
             $table->double('budget', 8, 2);
-            //$table->primary('id');
         });
     }
 

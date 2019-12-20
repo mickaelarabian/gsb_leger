@@ -20,7 +20,7 @@ class CreateDepensesTable extends Migration
             $table->string('libelle');
             $table->text('description');
             $table->double('prix', 8, 2);
-            $table->foreign('service_id')->references('id')->on('services');
+            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');;
         });
     }
 

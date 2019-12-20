@@ -29,6 +29,9 @@
                               <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
                               <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #ff7776; border-radius: 25px;" class="row" href="/services/create/{{$id}}">Ajouter un service <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
                             </div>
+                            <div class="mt-4 mb-4">
+                                <h5 style="font-weight:500; text-align: center">Les services du siège x</h5>
+                            </div>
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
                                 @foreach ($services as $service)
@@ -47,7 +50,7 @@
                                                          </div>
                                                       </div>
 
-                                            <h5 class="card-title">Service {{ $service->nom }}</h5>
+                                            <h6 class="card-title">Service {{ $service->nom }}</h6>
                                             <p class="card-text" style="font-size:13px">Budget restant: <b style="color:green;">{{$service->budget}} $</b></p>
                                         </div>
                                         <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important; background-color:#ff7776; border-color:#ff7776; font-size:13px" href="/service/{{$service->id}}" role="button">Accéder au service</a>

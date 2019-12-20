@@ -46,7 +46,7 @@
                                 </ol>
                             </nav>
                             <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
-                                <a class="shadow-sm" style="font-size: 15px; padding: 5px 15px; color: #fff; background-color: #ff7776; border-radius: 25px;" class="row" href="/sieges">Retourner à la liste <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i></a>
+                                <a class="shadow-sm" style="font-size: 15px; padding: 5px 15px; color: #fff; background-color: #ff7776; border-radius: 25px; font-size:13px;" class="row" href="/sieges">Retourner à la liste <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i></a>
                             </div>
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
@@ -78,7 +78,7 @@
                                                                                       <label for="exampleInputEmail1">Budget</label>
                                                                                       <input type="text"  class="form-control" name="budget" aria-describedby="emailHelp" placeholder="France" required>
                                                                                   </div>
-                                                                              <button style="background-color:#ff7776; border-color:#ff7776; font-size: 13px; padding: 5px 10px;" type="submit" class="btn btn-primary">Ajouter</button>
+                                                                              <button style="background-color:#ff7776; border-color:#ff7776; font-size: 13px; padding: 5px 10px; float:right;" type="submit" class="btn btn-primary">Ajouter</button>
                                                                             </form>
                                                               </div>
                                                             </div>

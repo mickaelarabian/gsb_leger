@@ -101,7 +101,7 @@
                                                                                     <label for="exampleInputEmail1">Ville</label>
                                                                                     <input type="text" class="form-control" name="ville" aria-describedby="emailHelp" placeholder="Lyon" required>
                                                                                 </div>
-                                                                              <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px; font-size:13px;" type="submit" class="btn btn-primary">Ajouter</button>
+                                                                              <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px; font-size:13px; float:right;" type="submit" class="btn btn-primary">Ajouter</button>
                                                                             </form>
                                                               </div>
                                                             </div>

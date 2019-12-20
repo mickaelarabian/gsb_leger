@@ -29,7 +29,9 @@
                                 <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
                                         <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #ff7776; border-radius: 25px;" class="row" href="/sieges/create">Ajouter un siège <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
                                     </div>
-
+                                    <div class="mt-4 mb-4">
+                                        <h5 style="font-weight:500; text-align: center">Les sièges de Galaxy Swiss Bourdin</h5>
+                                    </div>
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
                                 @foreach ($sieges as $siege)
@@ -48,7 +50,7 @@
                                                      </div>
                                                   </div>
 
-                                        <h5 class="card-title">Siège {{ $siege->nom }}</h5>
+                                        <h6 class="card-title">Siège {{ $siege->nom }}</h6>
                                         <p class="card-text" style="font-size:13px">Ville: {{ $siege->ville }}</p>
                                         <p class="card-text" style="font-size:13px">Pays: {{ $siege->pays }}</p>
                                         <p class="card-text" style="font-size:13px">Budget total: {{ $siege->budget }} $</p>

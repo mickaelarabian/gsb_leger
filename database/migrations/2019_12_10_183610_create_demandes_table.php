@@ -20,7 +20,7 @@ class CreateDemandesTable extends Migration
             $table->date('date');
             $table->integer('service_id')->unsigned()->index();
             //$table->primary('id');
-            $table->foreign('service_id')->references('id')->on('services');
+            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');;
         });
     }
 

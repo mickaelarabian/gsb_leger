@@ -18,8 +18,8 @@ class CreatePersonnelServicesTable extends Migration
             $table->integer('service_id')->unsigned()->index();
             $table->date('date');
             $table->primary(['personnel_id','service_id', 'date']);
-            $table->foreign('personnel_id')->references('id')->on('personnels');
-            $table->foreign('service_id')->references('id')->on('services');
+            $table->foreign('personnel_id')->references('id')->on('personnels')->onDelete('cascade');;
+            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');;
         });
     }
 

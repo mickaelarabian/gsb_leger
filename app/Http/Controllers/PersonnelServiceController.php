@@ -7,13 +7,20 @@ use Illuminate\Http\Request;
 
 class PersonnelServiceController extends Controller
 {
-    public function create(Request $request){
+    public function create(Request $request, $id){
         $personnel_service = [
             'personnel_id' => $request->input('personnel_id'),
-            'service_id' => $request->input('service_id'),
+            'service_id' => $id,
             'date' => Carbon::now()
         ];
         Personnel_Service::create($personnel_service);
+        return back();
+    }
+
+    public function delete($id, $id2){
+        $Personnel_Service = Personnel_Service::where('personnel_id', $id)->where('service_id',$id2);
+        $Personnel_Service->delete();
+        return back();
     }
 
     public function getAllFromService($id)

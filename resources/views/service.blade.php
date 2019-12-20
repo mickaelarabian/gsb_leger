@@ -83,33 +83,24 @@
                                         <div class="col text-center" style="font-size: 13px">
                                             <p class="card-title mb-0">{{$personnel->telephone}}</p>
                                         </div>
-                                        <div class="dropdown" style="position: absolute; right:0">
-                                            <button class="btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i style="font-size: 13px; padding:0;" class="fas fa-ellipsis-v"></i>
-                                            </button>
-                                            <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
-                                                <div class="w-25">
-                                                    <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><i style="color: #fff" class="fas fa-pen"></i> </div>
-                                                    <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><a href="/personnels/delete/{{$personnel->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            <div style="font-size: 10px;"><a title="Retirer du service" href="/personnels/services/delete/{{$personnel->id}}/{{$service->id}}"><i style="color: #ff7776; padding-top:4px;" class="fas fa-trash-alt"></i></a></div>
                                     </div>
                                     @endforeach
                                     <div style="text-align: right;">
-                                    <div style="display: inline-block">
-                                        <form class="row" action="">
-                                            <div class="form">
-                                                <select class="custom-select shadow-sm" style="border: 1px solid #fff; font-size: 13px;" name="status" required>
-                                                    <option value="">Selectionner un personnel</option>
-                                                    @foreach ($personnels as $personnel)
-                                                    <option value="Administrateur">{{$personnel->nom}} {{$personnel->prenom}}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                            <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px; font-size:13px; margin-left:5px;" type="submit" class="btn btn-primary">Relier au service</button>
-                                        </form>
-                                    </div>
+                                        <div style="display: inline-block">
+                                            <form class="row" action="/personnels/services/create/{{$service->id}}" method="post">
+                                                @csrf
+                                                <div class="form">
+                                                    <select class="custom-select shadow-sm" name="personnel_id" style="border: 1px solid #fff; font-size: 13px;" name="status" required>
+                                                        <option value="">Selectionner un personnel</option>
+                                                        @foreach ($personnels as $personnel)
+                                                        <option value="{{$personnel->id}}">{{$personnel->nom}} {{$personnel->prenom}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px; font-size:13px; margin-left:5px;" type="submit" class="btn btn-primary">Relier au service</button>
+                                            </form>
+                                        </div>
                                     </div>
 
                                 </div>

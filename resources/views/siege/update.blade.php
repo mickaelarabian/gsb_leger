@@ -74,10 +74,6 @@
                                                                                   <label for="exampleInputEmail1">Pays</label>
                                                                                   <input type="text" class="form-control" value="{{$siege->pays}}" name="pays" aria-describedby="emailHelp" placeholder="France" required>
                                                                               </div>
-                                                                              <div class="form-group">
-                                                                                      <label for="exampleInputEmail1">Budget</label>
-                                                                                      <input type="text"  class="form-control" value="{{$siege->budget}}" name="budget" aria-describedby="emailHelp" placeholder="France" required>
-                                                                                  </div>
                                                                               <button style="background-color:#6b5aed; border-color:#6b5aed; font-size: 13px; padding: 5px 10px; float:right;" type="submit" class="btn btn-primary">Modifier</button>
                                                                             </form>
                                                               </div>

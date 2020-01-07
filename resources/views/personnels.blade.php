@@ -28,7 +28,7 @@
                 </ol>
             </nav>
             <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
-                <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #00b9af; border-radius: 25px;" class="row" href="/personnels/create">Ajouter un personnel <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
+                <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #6b5aed; border-radius: 25px;" class="row" href="/personnels/create">Ajouter un personnel <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
             </div>
             <div class="pr-5" style="margin:0px">
                 <section class="row">
@@ -102,8 +102,8 @@
                                             </button>
                                             <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
                                                 <div class="w-25">
-                                                    <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#d36565;"><a href="/personnels/update/{{$personnel->id}}"><i style="color: #fff" class="fas fa-pen"></i></a> </div>
-                                                    <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#d36565;"><a href="/personnels/delete/{{$personnel->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
+                                                    <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/personnels/update/{{$personnel->id}}"><i style="color: #fff" class="fas fa-pen"></i></a> </div>
+                                                    <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/personnels/delete/{{$personnel->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>

@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Service;
-use App\Personnel;
-use App\Personnel_Service;
+use App\User;
+use App\User_Service;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class ServiceController extends Controller
@@ -44,14 +44,14 @@ class ServiceController extends Controller
                 ->with(['personnels', 'depenses'])
                 ->first();
             //recup toutes les personnes qui ne sont pas dans le service
-            $personnelsEnservice = Personnel_Service::select('personnel_id')->where('service_id', $id)->get();
-            $personnels = Personnel::whereNotIn('id', $personnelsEnservice)->get();
+            $personnelsEnservice = User_Service::select('user_id')->where('service_id', $id)->get();
+            $personnels = User::whereNotIn('id', $personnelsEnservice)->get();
 
         } catch (ModelNotFoundException $e){
 
         }
         //return Controller::responseJson(200, "Le service $id a été retourné", $service);
-        return view('/service', compact('service'));
+        return view('/service', compact('service', 'personnels'));
     }
 
     public function displayCreate($id){

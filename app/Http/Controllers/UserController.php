@@ -3,20 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Personnel;
+use App\User;
 
-class PersonnelController extends Controller
+class UserController extends Controller
 {
     public function getAll()
     {
-        $personnels = Personnel::all();
+        $personnels = User::all();
         //return Controller::responseJson(200, "Les personnels ont été retournés", $personnels);
         return view('/personnels', compact('personnels'));
     }
 
     public function getPersonnel($id){
         try {
-            $personnel = Personnel::findOrFail($id);
+            $personnel = User::findOrFail($id);
         } catch (\Throwable $th){
 
         }
@@ -35,7 +35,7 @@ class PersonnelController extends Controller
             'ville' => $request->input('ville'),
             'password' => $request->input('password'),
         ];
-        Personnel::create($personnel);
+        User::create($personnel);
         return redirect('/personnels');
     }
 
@@ -44,12 +44,12 @@ class PersonnelController extends Controller
     }
 
     public function displayUpdate($id){
-        $personnel = PersonnelController::getPersonnel($id);
+        $personnel = UserController::getPersonnel($id);
         return view('/personnel/update', compact('personnel'));
     }
 
     public function update(Request $request){
-        $service = Personnel::findOrFail($request->id);
+        $service = User::findOrFail($request->id);
         $parameter = [
             'nom' => $request->input('nom'),
             'prenom' => $request->input('prenom'),
@@ -65,7 +65,7 @@ class PersonnelController extends Controller
 }
 
     public function delete($id){
-        Personnel::destroy($id);
+        User::destroy($id);
         return redirect('/personnels');
     }
 }

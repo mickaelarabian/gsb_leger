@@ -40,13 +40,13 @@
                         <div class="col-10" style="position: absolute; right:0;">
                             <nav aria-label="breadcrumb" style="width: 40%; margin-top: 25px">
                                 <ol class="breadcrumb row" style="padding: 2px 10px; background:none; font-size:13px">
-                                    <li class="breadcrumb-item"><a style="color: #d36565;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
-                                    <li class="breadcrumb-item"><a style="color: #d36565;" href="/personnels">Personnels</a></li>
+                                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/personnels">Personnels</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Modfieri</li>
                                 </ol>
                             </nav>
                               <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
-                                <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #d36565; border-radius: 25px;" class="row" href="/personnels">Retourner à la liste <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i></a>
+                                <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #6b5aed; border-radius: 25px;" class="row" href="/personnels">Retourner à la liste <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i></a>
                             </div>
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
@@ -55,8 +55,8 @@
                                             <div class="col-6 mt-1" style="margin: auto;">
                                                     <div class="modal-dialog" role="document">
                                                             <div class="modal-content" style="border:none; background:none;">
-                                                                <div class="modal-header rounded shadow-sm mb-1" style="background-color: #d36565; padding: 8px 10px;">
-                                                                    <h5 class="modal-title" style="font-size:15px; color:#fff; font-weight:bold;" id="exampleModalLabel">Modifier le personnel</h5>
+                                                                <div class="modal-header rounded shadow-sm mb-1" style="background-color: #fff; padding: 8px 10px;">
+                                                                    <h5 class="modal-title" style="font-size:15px; color:#424242; font-weight:bold;" id="exampleModalLabel">Modifier le personnel</h5>
 
                                                                   </div>
                                                                   <div class="modal-body rounded bg-white shadow-sm">
@@ -101,7 +101,7 @@
                                                                                     <label for="exampleInputEmail1">Ville</label>
                                                                                     <input type="text" class="form-control" value="{{$personnel->ville}}" name="ville" aria-describedby="emailHelp" placeholder="Lyon" required>
                                                                                 </div>
-                                                                              <button style="background-color:#d36565; border-color:#d36565; padding:5px 10px; font-size:13px; float:right;" type="submit" class="btn btn-primary">Modifier</button>
+                                                                              <button style="background-color:#6b5aed; border-color:#6b5aed; padding:5px 10px; font-size:13px; float:right;" type="submit" class="btn btn-primary">Modifier</button>
                                                                             </form>
                                                               </div>
                                                             </div>

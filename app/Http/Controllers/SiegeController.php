@@ -32,8 +32,7 @@ class SiegeController extends Controller
         $siege = [
             'nom' => $request->input('nom'),
             'ville' => $request->input('ville'),
-            'pays' => $request->input('pays'),
-            'budget' => $request->input('budget'),
+            'pays' => $request->input('pays')
         ];
         Siege::create($siege);
         return redirect('/');
@@ -54,8 +53,7 @@ class SiegeController extends Controller
                 'id' => $request->input('id'),
                 'nom' => $request->input('nom'),
                 'ville' => $request->input('ville'),
-                'pays' => $request->input('pays'),
-                'budget' => $request->input('budget'),
+                'pays' => $request->input('pays')
             ];
             $siege->update($parameter);
         return redirect('/sieges');

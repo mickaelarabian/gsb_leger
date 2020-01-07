@@ -30,7 +30,7 @@
                               <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #6b5aed; border-radius: 25px;" class="row" href="/services/create/{{$id}}">Ajouter un service <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
                             </div>
                             <div class="mt-4 mb-4">
-                                <h5 style="font-weight:500; text-align: center">Les services du siège x</h5>
+                                <h4 style="font-weight:500; text-align: center">Les services du siège x</h4>
                             </div>
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
@@ -45,7 +45,7 @@
                                                         </button>
                                                         <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
                                                                 <div class="w-25">
-                                                                <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/services/update/{{$id}}"><i style="color: #fff" class="fas fa-pen"></i></a> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/services/delete/{{$service->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
+                                                                <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/services/update/{{$service->id}}"><i style="color: #fff" class="fas fa-pen"></i></a> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/services/delete/{{$service->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
                                                                 </div>
                                                          </div>
                                                       </div>

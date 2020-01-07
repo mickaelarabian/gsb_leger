@@ -106,7 +106,7 @@
                                                 <div class="form">
                                                     <select class="custom-select shadow-sm" name="personnel_id" style="border: 1px solid #fff; font-size: 13px;" name="status" required>
                                                         <option value="">Selectionner un personnel</option>
-                                                        @foreach ($service->personnels as $personnel)
+                                                        @foreach ($personnels as $personnel)
                                                         <option value="{{$personnel->id}}">{{$personnel->nom}} {{$personnel->prenom}}</option>
                                                         @endforeach
                                                     </select>

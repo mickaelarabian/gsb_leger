@@ -12,7 +12,7 @@ class Service extends Model
     protected $fillable = ['nom', 'budget', 'siege_id'];
 
     public function personnels(){
-        return $this->belongsToMany(Personnel::class,'personnel_services');
+        return $this->belongsToMany(User::class,'user_services');
     }
 
     public function depenses(){

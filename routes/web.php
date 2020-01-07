@@ -40,16 +40,16 @@ Route::group(['prefix' => 'sieges'], function(){
 });
 
 Route::group(['prefix' => 'personnels'], function(){
-  Route::get('/', 'PersonnelController@getAll');
-  Route::get('/delete/{id}', 'PersonnelController@delete');
-  Route::get('/update/{id}', 'PersonnelController@displayUpdate');
-  Route::post('/update/{id}', 'PersonnelController@update');
-  Route::post('/create', 'PersonnelController@create');
-  Route::get('/create', 'PersonnelController@displayCreate');
+  Route::get('/', 'UserController@getAll');
+  Route::get('/delete/{id}', 'UserController@delete');
+  Route::get('/update/{id}', 'UserController@displayUpdate');
+  Route::post('/update/{id}', 'UserController@update');
+  Route::post('/create', 'UserController@create');
+  Route::get('/create', 'UserController@displayCreate');
 });
 
 //Routes personnels_service
-Route::post('/personnels/services/create/{id}', 'PersonnelServiceController@create');
-Route::get('/personnels/services/delete/{id}/{id2}', 'PersonnelServiceController@delete');
+Route::post('/personnels/services/create/{id}', 'UserServiceController@create');
+Route::get('/personnels/services/delete/{id}/{id2}', 'UserServiceController@delete');
 
 

@@ -23,12 +23,12 @@
         <div class="col-10" style="position: absolute; right:0;">
             <nav aria-label="breadcrumb" style="width: 40%; margin-top: 25px">
                 <ol class="breadcrumb row" style="padding: 2px 10px; background:none; font-size:13px">
-                    <li class="breadcrumb-item"><a style="color: #ff7776;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
-                    <li class="breadcrumb-item"><a style="color: #ff7776;" href="/personnels">Personnels</a></li>
+                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/personnels">Personnels</a></li>
                 </ol>
             </nav>
             <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
-                <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #ff7776; border-radius: 25px;" class="row" href="/personnels/create">Ajouter un personnel <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
+                <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #00b9af; border-radius: 25px;" class="row" href="/personnels/create">Ajouter un personnel <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
             </div>
             <div class="pr-5" style="margin:0px">
                 <section class="row">
@@ -36,7 +36,7 @@
                         <div class="">
                             <div class="body p-0">
                                 <div class="">
-                                    <div class="p-2 mb-2 shadow-sm rounded row" style="background-color:#ff7776; color:#fff;">
+                                    <div class="p-2 mb-2 shadow-sm rounded row" style="background-color:#fff; color:#424242;">
                                         <div class="col text-center">
                                             <h6 class="card-title mb-0" style="font-weight:bold; font-size: 13px">Matricule</h6>
                                         </div>
@@ -102,8 +102,8 @@
                                             </button>
                                             <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
                                                 <div class="w-25">
-                                                    <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><i style="color: #fff" class="fas fa-pen"></i> </div>
-                                                    <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><a href="/personnels/delete/{{$personnel->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
+                                                    <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#d36565;"><a href="/personnels/update/{{$personnel->id}}"><i style="color: #fff" class="fas fa-pen"></i></a> </div>
+                                                    <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#d36565;"><a href="/personnels/delete/{{$personnel->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>

@@ -14,7 +14,7 @@
 		<div class="col-6" style="margin:auto;">
 			<div class="modal-dialog" role="document">
                 <div class="modal-content" style="border:none; background:none;">
-                  <div class="modal-header rounded shadow-sm mb-1" style="background-color: #ff7776; padding: 8px 10px;">
+                  <div class="modal-header rounded shadow-sm mb-1" style="background-color: #d36565; padding: 8px 10px;">
                     <h5 class="modal-title" style="font-size:15px; color:#fff; font-weight:bold;" id="exampleModalLabel">Connectez-vous pour accéder à la plateforme</h5>
 
                   </div>
@@ -29,7 +29,7 @@
                                           <label for="exampleInputEmail1">Mot de passe</label>
                                           <input type="text" class="form-control" name="ville" aria-describedby="emailHelp" placeholder="*******" required>
                                   </div>
-                                  <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px; font-size: 13px; float:right;" type="submit" class="btn btn-primary">Se connecter</button>
+                                  <button style="background-color:#d36565; border-color:#d36565; padding:5px 10px; font-size: 13px; float:right;" type="submit" class="btn btn-primary">Se connecter</button>
                                 </form>
                   </div>
                 </div>

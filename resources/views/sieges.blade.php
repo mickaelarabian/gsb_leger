@@ -21,13 +21,13 @@
                         <div class="col-10" style="position: absolute; right:0;">
                             <nav aria-label="breadcrumb" style="width: 40%; margin-top: 25px">
                                 <ol class="breadcrumb row" style="padding: 2px 10px; background:none; font-size:13px">
-                                    <li class="breadcrumb-item"><a style="color: #ff7776;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
-                                    <li class="breadcrumb-item"><a style="color: #ff7776;" href="/sieges">Sièges</a></li>
+                                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/sieges">Sièges</a></li>
                                 </ol>
                             </nav>
 
                                 <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
-                                        <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #ff7776; border-radius: 25px;" class="row" href="/sieges/create">Ajouter un siège <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
+                                        <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #6b5aed; border-radius: 25px;" class="row" href="/sieges/create">Ajouter un siège <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
                                     </div>
                                     <div class="mt-4 mb-4">
                                         <h5 style="font-weight:500; text-align: center">Les sièges de Galaxy Swiss Bourdin</h5>
@@ -35,7 +35,7 @@
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
                                 @foreach ($sieges as $siege)
-                            <div class="col-3">
+                            <div class="col-4">
                                 <div class="card shadow-sm mb-5 bg-white rounded border-0">
                                     <div class="card-body p-0">
                                         <div class="p-3">
@@ -45,18 +45,18 @@
                                                     </button>
                                                     <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
                                                             <div class="w-25">
-                                                            <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><i style="color: #fff" class="fas fa-pen"></i> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><a href="/sieges/delete/{{$siege->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
+                                                            <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/sieges/update/{{$siege->id}}"><i style="color: #fff" class="fas fa-pen"></i></a> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/sieges/delete/{{$siege->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
                                                             </div>
                                                      </div>
                                                   </div>
 
-                                        <h6 class="card-title">Siège {{ $siege->nom }}</h6>
+                                        <h6 style="color:#333; font-weight:bold;" class="card-title">Siège {{ $siege->nom }}</h6>
                                         <p class="card-text" style="font-size:13px">Ville: {{ $siege->ville }}</p>
                                         <p class="card-text" style="font-size:13px">Pays: {{ $siege->pays }}</p>
-                                        <p class="card-text" style="font-size:13px">Budget total: {{ $siege->budget }} $</p>
+                                        <p class="card-text" style="font-size:13px">Budget total: {{ $siege->budget }} €</p>
                                         <p class="card-text" style="font-size:13px">Personnels total: 27</p>
                                     </div>
-                                    <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important; background-color:#ff7776; border-color:#ff7776; font-size:13px" href="/services/siege/{{$siege->id}}" role="button">Accéder au siège</a>
+                                    <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important; background-color:#6b5aed; border-color:#6b5aed; font-size:13px" href="/services/siege/{{$siege->id}}" role="button">Accéder au siège</a>
                                     </div>
                                 </div>
                             </div>

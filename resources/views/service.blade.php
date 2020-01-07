@@ -23,44 +23,57 @@
         <div class="col-10" style="position: absolute; right:0;">
             <nav aria-label="breadcrumb" style="width: 40%; margin-top: 25px">
                 <ol class="breadcrumb row" style="padding: 2px 10px; background:none; font-size:13px">
-                    <li class="breadcrumb-item"><a style="color: #ff7776;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
-                    <li class="breadcrumb-item"><a style="color: #ff7776;" href="/sieges">Sièges</a></li>
-                    <li class="breadcrumb-item"><a style="color: #ff7776;" href="#">Services</a></li>
+                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/sieges">Sièges</a></li>
+                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="#">Services</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{$service->nom}}</li>
                 </ol>
             </nav>
             <div class="row mr-5 pt-1">
                 <div class="col-7">
                     <div class="col-11">
-                        <div class="card row shadow-sm mb-4 bg-white rounded border-0">
+                        <div class="card row shadow-sm mb-2 bg-white rounded border-0">
                             <div class="card-body p-0">
                                 <div class="p-3">
-                                    <div class="dropdown" style="position: absolute; top:0; right:0;">
-                                        <button class="btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v"></i>
-                                        </button>
-                                        <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
-                                            <div class="w-25">
-                                                <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><i style="color: #fff" class="fas fa-pen"></i> </div>
-                                                <div class="sservice/1hadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#007bff;"><i style="color: #fff" class="fas fa-trash-alt"></i></div>
-                                            </div>
+                                <div class="dropdown" style="position: absolute; top:0; right:0;">
+                                                        <button class="btn" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="fas fa-ellipsis-v"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
+                                                                <div class="w-25">
+                                                                <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/services/update/{{$service->id}}"><i style="color: #fff" class="fas fa-pen"></i></a> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/services/delete/{{$service->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
+                                                                </div>
+                                                         </div>
+                                                      </div>
+
+                                    <h5 style="color:#333333; font-weight:bold;" class="card-title">Service {{$service->nom}}</h5>
+                                    <p class="card-text" style="font-size:13px"><b>Service:</b> {{$service->nom}}</p>
+                                    <p class="card-text" style="font-size:13px"><b>Siege:</b> gtfvt</p>
+                                    <p class="card-text" style="font-size:13px"><b>Personnel:</b> 6</p>
+                                    <p class="card-text" style="font-size:13px;"><b>Budget:</b> <i style="color:#54d575;">{{$service->budget}} €</i></p>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="mb-4" style="text-align: right;">
+                                        <div style="display: inline-block">
+                                            <form class="row" action="/services/updatebudget/{{$service->id}}" method="post">
+                                                @csrf
+                                                <div class="form">
+                                                    <b>Budget:</b> <input class="shadow-sm" type="text" placeholder="Budget" style="color: #727272;border: 1px solid #fff; font-size: 13px; padding:.375rem 1.75rem .375rem .75rem; border-radius:.25rem; width:125px; font-style:italic;" name="budget" value={{$service->budget}}>
+                                                </div>
+                                                <button style="background-color:#6b5aed; border-color:#6b5aed; padding:5px 10px; font-size:13px; margin-left:5px;" type="submit" class="btn btn-primary"><i class="far fa-save"></i></button>
+                                            </form>
                                         </div>
                                     </div>
 
-                                    <h5 class="card-title">Service {{$service->nom}}</h5>
-                                    <p class="card-text" style="font-size:13px">Service: {{$service->nom}}</p>
-                                    <p class="card-text" style="font-size:13px">Siege: gtfvt</p>
-                                    <p class="card-text" style="font-size:13px">Personnel: 6</p>
-                                    <p class="card-text" style="font-size:15px; text-align:right;">Budget restant: <b style="color:green;">{{$service->budget}} $</b></p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="col-11">
                         <div class="">
                             <div class="body p-0">
                                 <div class="">
-                                    <div class="p-2 mb-2 shadow-sm rounded row" style="background-color:#ff7776; color:#fff;">
+                                    <div class="p-2 mb-2 shadow-sm rounded row" style="background-color:#fff; color:#6b5aed;">
                                         <div class="col text-center">
                                             <h6 class="card-title mb-0" style="font-weight:bold; font-size: 13px">Liste du personnel du service</h6>
                                         </div>
@@ -83,7 +96,7 @@
                                         <div class="col text-center" style="font-size: 13px">
                                             <p class="card-title mb-0">{{$personnel->telephone}}</p>
                                         </div>
-                                            <div style="font-size: 10px;"><a title="Retirer du service" href="/personnels/services/delete/{{$personnel->id}}/{{$service->id}}"><i style="color: #ff7776; padding-top:4px;" class="fas fa-trash-alt"></i></a></div>
+                                            <div style="font-size: 10px;"><a title="Retirer du service" href="/personnels/services/delete/{{$personnel->id}}/{{$service->id}}"><i style="color: #00b9af; padding-top:4px;" class="fas fa-trash-alt"></i></a></div>
                                     </div>
                                     @endforeach
                                     <div style="text-align: right;">
@@ -93,12 +106,12 @@
                                                 <div class="form">
                                                     <select class="custom-select shadow-sm" name="personnel_id" style="border: 1px solid #fff; font-size: 13px;" name="status" required>
                                                         <option value="">Selectionner un personnel</option>
-                                                        @foreach ($personnels as $personnel)
+                                                        @foreach ($service->personnels as $personnel)
                                                         <option value="{{$personnel->id}}">{{$personnel->nom}} {{$personnel->prenom}}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
-                                                <button style="background-color:#ff7776; border-color:#ff7776; padding:5px 10px; font-size:13px; margin-left:5px;" type="submit" class="btn btn-primary">Relier au service</button>
+                                                <button style="background-color:#6b5aed; border-color:#6b5aed; padding:5px 10px; font-size:13px; margin-left:5px;" type="submit" class="btn btn-primary">Relier au service</button>
                                             </form>
                                         </div>
                                     </div>
@@ -115,7 +128,7 @@
                         <div class="">
                             <div class="body p-0">
                                 <div class="">
-                                    <div class="p-2 mb-2 shadow-sm rounded row" style="background-color:#ff7776; color:#fff;">
+                                    <div class="p-2 mb-2 shadow-sm rounded row" style="background-color:#fff; color:#6b5aed;">
                                         <div class="col text-center">
                                             <h6 class="card-title mb-0" style="font-weight:bold; font-size: 13px;">Activités du service</h6>
                                         </div>
@@ -129,8 +142,8 @@
                                         <div class="col-4 text-center" style="font-size: 13px">
                                             <p class="card-title mb-0">{{$depense->libelle}}</p>
                                         </div>
-                                        <div class="col text-center" style="font-size: 13px; color:red;">
-                                            <p class="card-title mb-0 row">- {{$depense->prix}} $</p>
+                                        <div class="col text-center" style="font-size: 13px; color:#ed5a5a;">
+                                            <p class="card-title mb-0 row">- {{$depense->prix}} EUR</p>
                                         </div>
                                         <div class="col-5 text-center" style="font-size: 13px">
                                             <p class="card-title mb-0">{{$depense->date}}</p>

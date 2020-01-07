@@ -11,7 +11,7 @@ class SiegeController extends Controller
     {
         $sieges = Siege::all();
         //return Controller::responseJson(200, "Les sieges ont été retournés", $sieges);
-        return view('home', compact('sieges'));
+        return view('sieges', compact('sieges'));
     }
 
     public function getSiege($id){
@@ -20,7 +20,7 @@ class SiegeController extends Controller
         } catch (\Throwable $th){
 
         }
-        return Controller::responseJson(200, "Le siege $id a été retourné", $siege);
+        return $siege;
     }
 
     public function delete($id){
@@ -39,20 +39,26 @@ class SiegeController extends Controller
         return redirect('/');
     }
 
-    public function update(Request $request, $id){
-        try {
-            $siege = Siege::findOrFail($id);
-            $siege = [
+    public function displayCreate(){
+        return view('/siege/add');
+    }
+
+    public function displayUpdate($id){
+        $siege = SiegeController::getSiege($id);
+        return view('/siege/update', compact('siege'));
+    }
+
+    public function update(Request $request){
+            $siege = Siege::findOrFail($request->id);
+            $parameter = [
+                'id' => $request->input('id'),
                 'nom' => $request->input('nom'),
                 'ville' => $request->input('ville'),
                 'pays' => $request->input('pays'),
                 'budget' => $request->input('budget'),
             ];
-            Siege::update($siege);
-        } catch (\Throwable $th){
-
-        }
-        return Controller::responseJson(200, "Le siege $id a été modifié", $siege);
+            $siege->update($parameter);
+        return redirect('/sieges');
     }
 
     public function count(){

@@ -21,13 +21,13 @@
                         <div class="col-10" style="position: absolute; right:0;">
                             <nav aria-label="breadcrumb" style="width: 40%; margin-top: 25px">
                                 <ol class="breadcrumb row" style="padding: 2px 10px; background:none; font-size:13px">
-                                    <li class="breadcrumb-item"><a style="color: #ff7776;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
-                                    <li class="breadcrumb-item"><a style="color: #ff7776;" href="/sieges">Sièges</a></li>
-                                    <li class="breadcrumb-item"><a style="color: #ff7776;" href="#">Services</a></li>
+                                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/sieges">Sièges</a></li>
+                                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="#">Services</a></li>
                                 </ol>
                             </nav>
                               <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
-                              <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #ff7776; border-radius: 25px;" class="row" href="/services/create/{{$id}}">Ajouter un service <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
+                              <a class="shadow-sm" style="font-size: 13px; padding: 5px 15px; color: #fff; background-color: #6b5aed; border-radius: 25px;" class="row" href="/services/create/{{$id}}">Ajouter un service <i style="font-size: 13px; padding-top:5px; padding-left:5px;" class="fas fa-plus"></i></a>
                             </div>
                             <div class="mt-4 mb-4">
                                 <h5 style="font-weight:500; text-align: center">Les services du siège x</h5>
@@ -35,7 +35,7 @@
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
                                 @foreach ($services as $service)
-                            <div class="col-3">
+                            <div class="col-4">
                                     <div class="card shadow-sm mb-5 bg-white rounded border-0">
                                         <div class="card-body p-0">
                                             <div class="p-3">
@@ -45,15 +45,15 @@
                                                         </button>
                                                         <div class="dropdown-menu" style="background: none; border:none" aria-labelledby="dropdownMenu2">
                                                                 <div class="w-25">
-                                                                <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><i style="color: #fff" class="fas fa-pen"></i> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#ff7776;"><a href="/services/delete/{{$service->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
+                                                                <div class="shadow-sm" style="width: 25px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/services/update/{{$id}}"><i style="color: #fff" class="fas fa-pen"></i></a> </div> <div class="shadow-sm" style="width:25px;margin-top:5px;border-radius: 20px; padding: 5px 8px; font-size: 10px; background-color:#00b9af;"><a href="/services/delete/{{$service->id}}"><i style="color: #fff" class="fas fa-trash-alt"></i></a></div>
                                                                 </div>
                                                          </div>
                                                       </div>
 
-                                            <h6 class="card-title">Service {{ $service->nom }}</h6>
-                                            <p class="card-text" style="font-size:13px">Budget restant: <b style="color:green;">{{$service->budget}} $</b></p>
+                                            <h6 style="color:#333333; font-weight:bold;" class="card-title">Service {{ $service->nom }}</h6>
+                                            <p class="card-text" style="font-size:13px">Budget restant: <i style="color:#54d575;">{{$service->budget}} €</i></p>
                                         </div>
-                                        <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important; background-color:#ff7776; border-color:#ff7776; font-size:13px" href="/service/{{$service->id}}" role="button">Accéder au service</a>
+                                        <a class="btn btn-primary btn-sm rounded-0 w-100" style="border-radius:0px 0px .25rem .25rem  !important; background-color:#6b5aed; border-color:#6b5aed; font-size:13px" href="/services/{{$service->id}}" role="button">Accéder au service</a>
                                         </div>
                                     </div>
                                 </div>

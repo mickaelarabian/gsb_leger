@@ -42,7 +42,7 @@
                                 <ol class="breadcrumb row" style="padding: 2px 10px; background:none; font-size:13px">
                                     <li class="breadcrumb-item"><a style="color: #d36565;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
                                     <li class="breadcrumb-item"><a style="color: #d36565;" href="/personnels">Personnels</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Ajouter</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Modfieri</li>
                                 </ol>
                             </nav>
                               <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
@@ -56,24 +56,24 @@
                                                     <div class="modal-dialog" role="document">
                                                             <div class="modal-content" style="border:none; background:none;">
                                                                 <div class="modal-header rounded shadow-sm mb-1" style="background-color: #d36565; padding: 8px 10px;">
-                                                                    <h5 class="modal-title" style="font-size:15px; color:#fff; font-weight:bold;" id="exampleModalLabel">Ajouter un personnel</h5>
+                                                                    <h5 class="modal-title" style="font-size:15px; color:#fff; font-weight:bold;" id="exampleModalLabel">Modifier le personnel</h5>
 
                                                                   </div>
                                                                   <div class="modal-body rounded bg-white shadow-sm">
-                                                                      <form action="/personnels/create" method="post">
+                                                                  <form action="/personnels/update/{{$personnel->id}}" method="post">
                                                                           @csrf
                                                                               <div class="form-group">
                                                                                 <label for="exampleInputEmail1">Nom</label>
-                                                                                <input type="text" class="form-control" name="nom" aria-describedby="emailHelp" placeholder="Arabian" required>
+                                                                              <input type="text" class="form-control" value="{{$personnel->nom}}" name="nom" aria-describedby="emailHelp" placeholder="Arabian" required>
                                                                               </div>
                                                                               <div class="form-group">
                                                                                       <label for="exampleInputEmail1">Prénom</label>
-                                                                                      <input type="text" class="form-control" name="prenom" aria-describedby="emailHelp" placeholder="Mickaël" required>
+                                                                                      <input type="text" class="form-control" value="{{$personnel->prenom}}" name="prenom" aria-describedby="emailHelp" placeholder="Mickaël" required>
                                                                               </div>
                                                                               <label for="exampleInputEmail1">Status</label>
                                                                               <div class="form-group">
                                                                                 <select class="custom-select" style="font-size:13px;" name="status" required>
-                                                                                  <option value="">Choisir un status</option>
+                                                                                  <option value="{{$personnel->status}}">{{$personnel->status}}</option>
                                                                                   <option value="Responsable">Responsable</option>
                                                                                   <option value="Chercheur">Chercheur</option>
                                                                                   <option value="Commercial">Commercial</option>
@@ -83,25 +83,25 @@
                                                                               </div>
                                                                               <div class="form-group">
                                                                                   <label for="exampleInputEmail1">Date de naissance</label>
-                                                                                  <input type="text" class="form-control" name="dateNaissance" aria-describedby="emailHelp" placeholder="1999-01-01" required>
+                                                                                  <input type="text" class="form-control" value="{{$personnel->dateNaissance}}" name="dateNaissance" aria-describedby="emailHelp" placeholder="1999-01-01" required>
                                                                               </div>
                                                                               <div class="form-group">
                                                                                       <label for="exampleInputEmail1">Téléphone</label>
-                                                                                      <input type="text" class="form-control" name="telephone" aria-describedby="emailHelp" placeholder="0646623249" required>
+                                                                                      <input type="text" class="form-control" value="{{$personnel->telephone}}" name="telephone" aria-describedby="emailHelp" placeholder="0646623249" required>
                                                                                   </div>
                                                                                   <div class="form-group">
                                                                                     <label for="exampleInputEmail1">Adresse</label>
-                                                                                    <input type="text" class="form-control" name="adresse" aria-describedby="emailHelp" placeholder="16 rue de la prairie" required>
+                                                                                    <input type="text" class="form-control" value="{{$personnel->adresse}}" name="adresse" aria-describedby="emailHelp" placeholder="16 rue de la prairie" required>
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <label for="exampleInputEmail1">Code postal</label>
-                                                                                    <input type="text" class="form-control" name="codePostal" aria-describedby="emailHelp" placeholder="69150" required>
+                                                                                    <input type="text" class="form-control" value="{{$personnel->codePostal}}" name="codePostal" aria-describedby="emailHelp" placeholder="69150" required>
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <label for="exampleInputEmail1">Ville</label>
-                                                                                    <input type="text" class="form-control" name="ville" aria-describedby="emailHelp" placeholder="Lyon" required>
+                                                                                    <input type="text" class="form-control" value="{{$personnel->ville}}" name="ville" aria-describedby="emailHelp" placeholder="Lyon" required>
                                                                                 </div>
-                                                                              <button style="background-color:#d36565; border-color:#d36565; padding:5px 10px; font-size:13px; float:right;" type="submit" class="btn btn-primary">Ajouter</button>
+                                                                              <button style="background-color:#d36565; border-color:#d36565; padding:5px 10px; font-size:13px; float:right;" type="submit" class="btn btn-primary">Modifier</button>
                                                                             </form>
                                                               </div>
                                                             </div>

@@ -41,12 +41,12 @@
                             <nav aria-label="breadcrumb" style="width: 40%; margin-top: 25px">
                                 <ol class="breadcrumb row" style="padding: 2px 10px; background:none; font-size:13px">
                                     <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/"><i class="fas fa-home"></i> Dashboard</a></li>
-                                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/sieges">Services</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Ajouter</li>
+                                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/sieges">Sièges</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Modifier</li>
                                 </ol>
                             </nav>
-                              <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
-                              <a class="shadow-sm" style="font-size: 15px; padding: 5px 15px; color: #fff; background-color: #6b5aed; border-radius: 25px; font-size:13px;" class="row" href="/services/siege/{{$id}}">Retourner à la liste <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i></a>
+                            <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
+                                <a class="shadow-sm" style="font-size: 15px; padding: 5px 15px; color: #fff; background-color: #6b5aed; border-radius: 25px; font-size:13px;" class="row" href="/sieges">Retourner à la liste <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i></a>
                             </div>
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">
@@ -54,23 +54,31 @@
                                         <div class="row">
                                             <div class="col-6 mt-1" style="margin: auto;">
                                                     <div class="modal-dialog" role="document">
-                                                        <div class="modal-content" style="border:none; background:none;">
-                                                                <div class="modal-header rounded shadow-sm mb-1" style="background-color: #fff; padding: 8px 10px;">
-                                                                    <h5 class="modal-title" style="font-size:15px; color:#424242; font-weight:bold;" id="exampleModalLabel">Ajouter un service</h5>
+                                                            <div class="modal-content" style="border:none; background:none;">
+                                                              <div class="modal-header rounded shadow-sm mb-1" style="background-color: #fff; padding: 8px 10px;">
+                                                                <h5 class="modal-title" style="font-size:15px; color:#424242; font-weight:bold;" id="exampleModalLabel">Modifier le siège</h5>
 
-                                                                  </div>
-                                                                  <div class="modal-body rounded bg-white shadow-sm">
-                                                              <form action="/services/create/{{$id}}" method="post">
+                                                              </div>
+                                                              <div class="modal-body rounded bg-white shadow-sm">
+                                                                      <form action="/sieges/update/{{$siege->id}}" method="post">
                                                                           @csrf
                                                                               <div class="form-group">
-                                                                                <label for="exampleInputEmail1">Nom</label>
-                                                                                <input type="text" class="form-control" name="nom" aria-describedby="emailHelp" placeholder="Recherche et développement" required>
+                                                                                <label for="exampleInputEmail1">Nom du siège</label>
+                                                                              <input type="text" class="form-control" value="{{$siege->nom}}" name="nom" aria-describedby="emailHelp" placeholder="Administratif" autofocus required>
+                                                                              </div>
+                                                                              <div class="form-group">
+                                                                                      <label for="exampleInputEmail1">Ville</label>
+                                                                                      <input type="text" class="form-control" value="{{$siege->ville}}" name="ville" aria-describedby="emailHelp" placeholder="Lyon" required>
+                                                                              </div>
+                                                                              <div class="form-group">
+                                                                                  <label for="exampleInputEmail1">Pays</label>
+                                                                                  <input type="text" class="form-control" value="{{$siege->pays}}" name="pays" aria-describedby="emailHelp" placeholder="France" required>
                                                                               </div>
                                                                               <div class="form-group">
                                                                                       <label for="exampleInputEmail1">Budget</label>
-                                                                                      <input type="text" class="form-control" name="budget" aria-describedby="emailHelp" placeholder="11 000" required>
+                                                                                      <input type="text"  class="form-control" value="{{$siege->budget}}" name="budget" aria-describedby="emailHelp" placeholder="France" required>
                                                                                   </div>
-                                                                              <button style="background-color:#6b5aed; border-color:#6b5aed; font-size: 13px; padding: 5px 10px; float:right;" type="submit" class="btn btn-primary">Ajouter</button>
+                                                                              <button style="background-color:#6b5aed; border-color:#6b5aed; font-size: 13px; padding: 5px 10px; float:right;" type="submit" class="btn btn-primary">Modifier</button>
                                                                             </form>
                                                               </div>
                                                             </div>
@@ -90,7 +98,7 @@
 </html>
 
 <style>
-    .form-control, label{
-        font-size:13px;
-    }
-    </style>
+.form-control, label{
+    font-size:13px;
+}
+</style>

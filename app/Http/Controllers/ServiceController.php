@@ -51,11 +51,35 @@ class ServiceController extends Controller
 
         }
         //return Controller::responseJson(200, "Le service $id a été retourné", $service);
-        return view('/service', compact('service', 'personnels'));
+        return view('/service', compact('service'));
     }
 
     public function displayCreate($id){
 
         return view('/service/add', compact('id'));
     }
+
+    public function displayUpdate($id){
+        $service = Service::findOrFail($id);
+        return view('/service/update', compact('service', 'id'));
+    }
+
+    public function update(Request $request){
+        $service = Service::findOrFail($request->id);
+        $parameter = [
+            'nom' => $request->input('nom'),
+            'budget' => $request->input('budget'),
+        ];
+        $service->update($parameter);
+        return redirect('/services/'.$request->id.'');
+    }
+
+    public function updateBudget(Request $request){
+        $service = Service::findOrFail($request->id);
+        $parameter = [
+            'budget' => $request->input('budget'),
+        ];
+        $service->update($parameter);
+    return back();
+}
 }

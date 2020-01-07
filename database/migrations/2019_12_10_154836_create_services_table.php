@@ -16,7 +16,7 @@ class CreateServicesTable extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nom');
-            $table->double('budget', 8, 2);
+            $table->double('budget', 12, 2);
             $table->integer('siege_id')->unsigned()->index();
             $table->foreign('siege_id')->references('id')->on('sieges')->onDelete('cascade');;
         });

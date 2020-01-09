@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Dashboard</title>
+        <title>Modifier un siège | GSB</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <!-- Fonts -->
@@ -46,7 +46,7 @@
                                 </ol>
                             </nav>
                             <div data-toggle="modal" data-target="#exampleModal" style="position:absolute; top:15px; right: 40px;">
-                                <a class="shadow-sm" style="font-size: 15px; padding: 5px 15px; color: #fff; background-color: #6b5aed; border-radius: 25px; font-size:13px;" class="row" href="/sieges">Retourner à la liste <i style="font-size: 14px; padding-top:5px; padding-left:5px;" class="fas fa-undo"></i></a>
+                                <a class="shadow-sm" style="font-size: 15px; padding: 5px 15px; color: #fff; background-color: #6b5aed; border-radius: 25px; font-size:13px;" class="row" href="/sieges"><i style="font-size: 14px; padding-top:5px;" class="fas fa-undo"></i> Retourner à la liste</a>
                             </div>
                             <div class="pt-1 pr-5" style="margin:0px">
                         <section class="row">

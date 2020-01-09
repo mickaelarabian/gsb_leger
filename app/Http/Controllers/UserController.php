@@ -10,8 +10,9 @@ class UserController extends Controller
     public function getAll()
     {
         $personnels = User::all();
+        $current = 'personnels';
         //return Controller::responseJson(200, "Les personnels ont été retournés", $personnels);
-        return view('/personnels', compact('personnels'));
+        return view('/personnels', compact('personnels', 'current'));
     }
 
     public function getPersonnel($id){
@@ -29,7 +30,7 @@ class UserController extends Controller
             'prenom' => $request->input('prenom'),
             'status' => $request->input('status'),
             'dateNaissance' => $request->input('dateNaissance'),
-            'telephone' => $request->input('telephone'),
+            'email' => $request->input('email'),
             'adresse' => $request->input('adresse'),
             'codePostal' => $request->input('codePostal'),
             'ville' => $request->input('ville'),
@@ -55,7 +56,7 @@ class UserController extends Controller
             'prenom' => $request->input('prenom'),
             'status' => $request->input('status'),
             'dateNaissance' => $request->input('dateNaissance'),
-            'telephone' => $request->input('telephone'),
+            'email' => $request->input('email'),
             'adresse' => $request->input('adresse'),
             'codePostal' => $request->input('codePostal'),
             'ville' => $request->input('ville')

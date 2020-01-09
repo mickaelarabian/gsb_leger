@@ -18,4 +18,8 @@ class Service extends Model
     public function depenses(){
         return $this->hasMany(Depense::class, 'service_id', 'id' );
     }
+
+    public function siege(){
+        return $this->belongsTo(Siege::class, 'siege_id', 'id' );
+    }
 }

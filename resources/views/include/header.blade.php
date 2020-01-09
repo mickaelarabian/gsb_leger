@@ -10,7 +10,7 @@
                     <a class="nav-link text-dark" href="/user/login"><i class="fas fa-user-shield"></i> Mickaël</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="/user/logout"><i style="color:#6b5aed" class="fas fa-sign-out-alt"></i></a>
+                        <a class="nav-link" href="/user/logout"><i style="width:13px; height:13px;" data-feather="log-out"></i></a>
                 </li>
             </ul>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Siege;
 use App\Service;
 use App\User;
 use App\User_Service;
@@ -13,8 +14,9 @@ class ServiceController extends Controller
     public function getAllFromSiege($id)
     {
         $services = Service::where('siege_id', $id)->get();
+        $siege = Siege::findOrFail($id);
         //return Controller::responseJson(200, "Les services ont été retournés", $services);
-        return view('/services', compact('services', 'id'));
+        return view('/services', compact('services', 'siege'));
     }
 
     public function create(Request $request, $id){
@@ -41,11 +43,11 @@ class ServiceController extends Controller
     public function getService($id){
         try {
             $service = Service::where('id', $id)
-                ->with(['personnels', 'depenses'])
+                ->with(['personnels', 'depenses', 'siege'])
                 ->first();
-            //recup toutes les personnes qui ne sont pas dans le service
             $personnelsEnservice = User_Service::select('user_id')->where('service_id', $id)->get();
             $personnels = User::whereNotIn('id', $personnelsEnservice)->get();
+            // $siege = Siege::select('nom')->where('id', $service->siege_id)->first();
 
         } catch (ModelNotFoundException $e){
 

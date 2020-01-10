@@ -15,26 +15,7 @@
 </head>
 
 <body style="background-color:#f9f9f9; font-size:.875rem">
-    <nav class="navbar navbar-expand-lg navbar-light bg-wight shadow-sm bg-white">
-        <div class="row" style="width: 100%">
-            <div class="col-2">
-
-            </div>
-            <div class="col-10">
-                <div class="collapse navbar-collapse float-right" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" href="/user/login"><i class="fas fa-user-shield"></i> Mickaël</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/user/logout"><i class="fas fa-sign-out-alt"></i></a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </nav>
+@include('/include/header')
     <div class="row">
         <div class="col-2" style="position: absolute; top: 0; height: 100%">
             @include('/include/menu')

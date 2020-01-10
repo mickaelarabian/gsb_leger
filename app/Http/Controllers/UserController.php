@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
     public function getAll()
     {
+        if(!Auth::check()){
+            return redirect('/login');
+        }
         $personnels = User::all();
         $current = 'personnels';
         //return Controller::responseJson(200, "Les personnels ont été retournés", $personnels);

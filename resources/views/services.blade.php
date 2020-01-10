@@ -22,7 +22,7 @@
                         <div class="col-10" style="position: absolute; right:0;">
                             <nav aria-label="breadcrumb" style="width: 40%; margin-top: 25px">
                                 <ol class="breadcrumb row" style="padding: 2px 10px; background:none; font-size:13px">
-                                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/sieges">Sièges</a></li>
+                                    <li class="breadcrumb-item"><a style="color: #6b5aed;" href="/sieges"><i style="width:13px; height:13px;" data-feather="home"></i> Sièges</a></li>
                                     <li class="breadcrumb-item"><a style="color: #6b5aed;" href="#">Services /</a></li>
                                 </ol>
                             </nav>

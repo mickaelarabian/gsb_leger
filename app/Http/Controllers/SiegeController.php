@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Siege;
+use Illuminate\Support\Facades\Auth;
 
 class SiegeController extends Controller
 {
     public function getAll()
     {
+        if(!Auth::check()){
+            return redirect('/login');
+        }
         $sieges = Siege::all();
         //return Controller::responseJson(200, "Les sieges ont été retournés", $sieges);
         return view('sieges', compact('sieges'));

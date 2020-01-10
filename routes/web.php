@@ -13,7 +13,7 @@
 
 Route::get('/login', 'AuthController@displayLogin');
 Route::post('/login', 'AuthController@login');
-Route::get('/lougout', 'AuthController@logout');
+Route::get('/logout', 'AuthController@logout');
 
 Route::get('/', 'SiegeController@getAll');
 

@@ -59,3 +59,5 @@ Route::group(['prefix' => 'sieges'], function(){
   Route::post('/personnels/services/create', 'PersonnelServiceController@create');
 
   Route::post('/depenses/create', 'DepenseController@create');
+
+  Route::post('/signup', 'AuthController@signup');

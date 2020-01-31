@@ -22,8 +22,11 @@ class AuthController extends Controller
            $email = $request->get('email');
            $password = $request->get('password');
            if(isset($email) && isset($password)){
-                Auth::attempt(['email' => $email, 'password' => $password]);
-                return redirect('/');
+             if(Auth::attempt(['email' => $email, 'password' => $password])){
+                 return redirect('/');
+             } else{
+                return redirect('erreur');
+             }
            } else{
                 return redirect('/login');
            }

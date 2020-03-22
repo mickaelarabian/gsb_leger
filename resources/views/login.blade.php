@@ -25,9 +25,10 @@
 
                   </div>
                   <div class="modal-body rounded bg-white shadow-sm">
-                          <form action="/login" method="post">
+                          <form action="/test" method="post">
                               @csrf
                                   <div class="form-group">
+                                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <label for="exampleInputEmail1">Adresse mail</label>
                                     <input type="text" class="form-control" name="email" aria-describedby="emailHelp" placeholder="exemple@gmail.com" autofocus required>
                                   </div>

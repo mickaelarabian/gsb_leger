@@ -15,7 +15,6 @@ class UserController extends Controller
         }
         $personnels = User::all();
         $current = 'personnels';
-        //return Controller::responseJson(200, "Les personnels ont été retournés", $personnels);
         return view('/personnels', compact('personnels', 'current'));
     }
 

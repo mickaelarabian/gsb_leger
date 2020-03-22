@@ -25,7 +25,7 @@ class AuthController extends Controller
              if(Auth::attempt(['email' => $email, 'password' => $password])){
                  return redirect('/');
              } else{
-                return redirect('erreur');
+                return redirect('/login');
              }
            } else{
                 return redirect('/login');

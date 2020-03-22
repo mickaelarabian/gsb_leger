@@ -16,7 +16,7 @@ Route::post('/login', 'AuthController@login');
 Route::get('/logout', 'AuthController@logout');
 
 Route::get('/', 'SiegeController@getAll');
-
+Route::post('/test', 'AuthController@login');
 Route::group(['prefix' => 'services'], function(){
     Route::get('/siege/{id}', 'ServiceController@getAllFromSiege');
     Route::get('/{id}', 'ServiceController@getService');
@@ -52,4 +52,4 @@ Route::group(['prefix' => 'personnels'], function(){
 Route::post('/personnels/services/create/{id}', 'UserServiceController@create');
 Route::get('/personnels/services/delete/{id}/{id2}', 'UserServiceController@delete');
 
-
+Route::get('/demandes', 'DemandeController@getAll');
